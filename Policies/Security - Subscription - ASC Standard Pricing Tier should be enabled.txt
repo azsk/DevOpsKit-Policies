@@ -1,0 +1,21 @@
+{
+ "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Security/pricings"
+        },
+        {
+          "field": "Microsoft.Security/pricings/pricingTier",
+          "notEquals": "Standard"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

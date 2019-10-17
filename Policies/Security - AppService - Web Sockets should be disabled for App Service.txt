@@ -1,0 +1,57 @@
+{ 
+"properties": { 
+"displayName": "Web Sockets should be disabled for App Service", 
+"mode": "All", 
+"parameters": { 
+"effectType": { 
+"type": "String", 
+"metadata": { 
+"displayName": "Effect", 
+"description": "Enable or disable the execution of the policy" 
+}, 
+"allowedValues": [ 
+"Deny", 
+"Disabled" 
+], 
+"defaultValue": "Deny" 
+} 
+}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "Microsoft.Web/sites" 
+}, 
+{ 
+"anyOf": [ 
+{ 
+"field": "Microsoft.Web/sites/config/webSocketsEnabled", 
+"equals": true" 
+}, 
+{ 
+"field": "Microsoft.Web/sites/siteConfig.webSocketsEnabled", 
+"equals": true 
+}, 
+{ 
+"field": "Microsoft.Web/sites/slots/siteConfig.webSocketsEnabled", 
+"equals": true 
+}, 
+{ 
+"field": "Microsoft.Web/sites/config/web.webSocketsEnabled", 
+"equals": true 
+}, 
+{ 
+"field": "Microsoft.Web/sites/slots/config/web.webSocketsEnabled", 
+"equals": true 
+} 
+] 
+} 
+] 
+}, 
+"then": { 
+"effect": "[parameters('effectType')]" 
+} 
+} 
+} 
+} 

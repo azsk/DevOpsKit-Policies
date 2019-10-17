@@ -1,0 +1,24 @@
+{ 
+"properties": { 
+"displayName": "Azure_KubernetesService_AuthN_Enabled_AAD", 
+"mode": "All", 
+"parameters": {}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "Microsoft.ContainerService/managedClusters" 
+}, 
+{ 
+"field": "Microsoft.ContainerService/managedClusters/aadProfile", 
+"exists": "false" 
+} 
+] 
+}, 
+"then": { 
+"effect": "audit" 
+} 
+} 
+} 
+} 

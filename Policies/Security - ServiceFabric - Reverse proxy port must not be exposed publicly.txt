@@ -1,0 +1,25 @@
+{ 
+"properties": { 
+"displayName": "Azure_ServiceFabric_DP_Dont_Expose_Reverse_Proxy_Port", 
+"policyType": "Custom", 
+"mode": "All", 
+"parameters": {}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "Microsoft.ServiceFabric/clusters" 
+}, 
+{ 
+"field": "Microsoft.ServiceFabric/clusters/nodeTypes[*].reverseProxyEndpointPort", 
+"exists": "true" 
+} 
+] 
+}, 
+"then": { 
+"effect": "audit" 
+} 
+} 
+} 
+} 

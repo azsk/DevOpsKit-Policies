@@ -1,0 +1,24 @@
+{ 
+"properties": { 
+"displayName": "Azure_KubernetesService_Deploy_Enable_Cluster_RBAC", 
+"mode": "All", 
+"parameters": {}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "Microsoft.ContainerService/managedClusters" 
+}, 
+{ 
+"field": "Microsoft.ContainerService/managedClusters/enableRBAC", 
+"equals": false 
+} 
+] 
+}, 
+"then": { 
+"effect": "audit" 
+} 
+} 
+} 
+} 

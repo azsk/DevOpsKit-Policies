@@ -1,0 +1,759 @@
+MIME-Version: 1.0
+Date: Mon, 14 Oct 2019 17:28:25 -0700
+From: Chris Stackhouse <cstack@microsoft.com>
+Subject: RE: Policy aliases
+Thread-Topic: RE: Policy aliases
+To: Mark Jacobs <majaco@microsoft.com>, Chris Eggert <cheggert@microsoft.com>, 
+	Liz Kim <elkim@microsoft.com>, Akhil Reddy Aleti <Akhil.Aleti@microsoft.com>, 
+	Yue Li <Li.Yue@microsoft.com>
+Cc: Michelle Swafford <miccohen@microsoft.com>
+Content-Type: multipart/related;
+	boundary="_41AE2712-C761-4FD3-BA0E-98EBEC53BE29_"
+
+--_41AE2712-C761-4FD3-BA0E-98EBEC53BE29_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.xmsonormal, li.xmsonormal, div.xmsonormal
+	{mso-style-name:x_msonormal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.EmailStyle19
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle23
+	{mso-style-type:personal;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.EmailStyle25
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1164513010;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1763657408 67698703 67698713 67698715 67698703 6769=
+8713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1
+	{mso-list-id:1674797478;
+	mso-list-type:hybrid;
+	mso-list-template-ids:3190798 67698703 67698713 67698715 67698703 67698713=
+ 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"blue" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hi Mark:<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I=E2=80=99ve gone through all 71 of the work items. =
+Here=E2=80=99s a summary of what I was able to gather.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I found some that were requests for missing aliases.=
+ I have published all of those:<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5069724&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053724421&amp;sdata=3DslPbglDlu%2BdMLkGs11J0uBKpuOd1egyplMzv0oQ2zuw%3D&=
+amp;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITVSO=
+/_workitems/edit/5069724" shash=3D"CngqJSBH19zfu58s40M0CmJZGCegSC0zLH0oWDI5=
+otD821v17J6LommAQ2XIKjgHeN&#43;kK7SMD9akzyNvIMKBra76Yqn7bs3r13cL5f3N9WeBZyO=
+ATkI85mCUG/17c7NEuvSG4VWkC3ekv8mcOd9kI1XFFEytkqaZ/28Wh2j/Kq8=3D">https://de=
+v.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5069724</a>
+ (Microsoft.BotService, not published before)<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5050033&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053734424&amp;sdata=3DaTFXcO0kc%2Bc5ip2CqtRJ9rRVU6ShQOndFgyCL%2FwGkEI%3=
+D&amp;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITV=
+SO/_workitems/edit/5050033" shash=3D"tq81Lyk9bLdtnL1uUxd57Kq2W78s/u8BEMRJhN=
+Ed&#43;6DU&#43;kibDykAKNE6&#43;o0GRxvebIAnrkif6jja&#43;31Mj1pQskWugdeRojgLM=
+dClfXGOMkNGR2YjimkTA5nq9hwKyeKGquu5XDOM/btPaeMcItOEbbM4fW63/AcWbISl3aVrKr8=
+=3D">https://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5050033</a>
+ (Microsoft.BotService, not published before)<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5050044&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053734424&amp;sdata=3DfwQ8tXtCzMZUc2f0o8aSdpSJz7jhgnYg7Vy9MF0cG04%3D&am=
+p;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITVSO/_=
+workitems/edit/5050044" shash=3D"QJEJGXuzpOQDQNerBQurFkZTS2LgTHvSIizIdVtPLe=
+QmzLdzy5&#43;2SEeyJ1PaNlbD&#43;RXFNPLFMcDl0DySbZPHH&#43;&#43;jGemvYmpkzWOkT=
+lbV0RqQAXVM&#43;UDvta&#43;o3tDl7sdHGxIb6mUjBQ&#43;rqYkJy2K9O/1qTTsy0lSEc7fe=
+EOV0e80=3D">https://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5050=
+044</a>
+ (Microsoft.ContainerInstance, not published before)<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5050073&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053744440&amp;sdata=3DGfDnxg66pAnqDv0%2F44GpSwGn6bfzEVKtagnCZn7Cqoc%3D&=
+amp;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITVSO=
+/_workitems/edit/5050073" shash=3D"Wbd6&#43;vHf4PJmUvhyFH1ZtqCUGRonL6FQsZhY=
+Zi&#43;tz50G&#43;/aK4r4inEZ3sQC/Cawm9ShRRD6oMf66RxzR7RFozVWCZ7/Ns6QD7I3Cizq=
+2mprefr96cK&#43;wCPuzAsoRRKRy5cWqOdK5qATh6hC&#43;8BJBV8Rv2QAm9TRYGT6JctUFtU=
+o=3D">https://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5050073</a=
+>
+ (Microsoft.ContainerInstance, not published before)<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5069684&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053744440&amp;sdata=3DOsdcfejE2CmQ8IDdNuRUwcTjxIQ30hQIlqqpoF581iw%3D&am=
+p;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITVSO/_=
+workitems/edit/5069684" shash=3D"P&#43;dzthWsC8XbEZfKpuWyrykfOoe8RB58aCxQQS=
+Hlvb4Yo4yNfWzpVjpZneAbN/1vEDRtiiy&#43;niFRXX21od1CGK37ibG/UZpVATIXFiSAFkSqL=
+wAE/RHhAj9GIU0UU9aO7wk8HvFApElU&#43;SMXIjafmTF8Z/HybAYyRaFcHSB/usk=3D">http=
+s://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5069684</a>
+ (refreshed aliases for Microsoft.ContainerRegistry)<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">This one appears to exist already:<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://nam06.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2Fdev.azure.com%2FMicrosoftIT%2FOneITVSO%2F_workit=
+ems%2Fedit%2F5050131&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e3=
+72cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C63706=
+6961053754443&amp;sdata=3Dkke2DmPnEJTcAZDoVgwZP4BpuIb2C%2FfwjwZMpHawbS0%3D&=
+amp;reserved=3D0" originalsrc=3D"https://dev.azure.com/MicrosoftIT/OneITVSO=
+/_workitems/edit/5050131" shash=3D"YlNv0yyCw7w7N03eVryjgeCpQ4UmZbxcIMv3fiFD=
+1&#43;vTtE8YyHx7iCeObnB8NSMR66bRJOmhCRdbcnPObaM7dmZMnVRJ5No3O6BHS62RHyvuzrG=
+aq7B&#43;AO6P3C6l1XZlR2GaQkXzFx8RneVO0Z/ULj8pES8usxEsb2ffEsutVEE=3D">https:=
+//dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5050131</a>:
+ Microsoft.DataFactory/factories/linkedservices/typeProperties.useEncrypted=
+Endpoints<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">The remainder appear to be mostly not actionable ali=
+as requests. These fall into several categories:<o:p></o:p></p>
+<ol style=3D"margin-top:0in" start=3D"1" type=3D"1">
+<li class=3D"MsoListParagraph" style=3D"margin-left:0in;mso-list:l0 level1 =
+lfo2">General requests for an alias that performs a capability that doesn=
+=E2=80=99t currently exist in the API or maybe requires some kind of additi=
+onal query or computation to determine.<o:p></o:p></li><li class=3D"MsoList=
+Paragraph" style=3D"margin-left:0in;mso-list:l0 level1 lfo2">Requests that =
+are not specific enough. In some cases I don=E2=80=99t know whether the req=
+uested functionality already exists in the API or not. If your team identif=
+ies a specific API property,
+ we can work from that.<o:p></o:p></li><li class=3D"MsoListParagraph" style=
+=3D"margin-left:0in;mso-list:l0 level1 lfo2">Requests for aliases on API pa=
+rameters or headers (e.g. Scope). Azure policies only apply to request/resp=
+onse bodies.<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"margin-=
+left:0in;mso-list:l0 level1 lfo2">Requests for aliases on non-ARM (e.g. Mic=
+rosoft.ClassicCompute, data plane) APIs. Azure policy applies only to ARM A=
+PIs. There is some preview work in progress for data plane policies
+ on Microsoft.KeyVault and Microsoft.Storage. Requests for help/engagement =
+for data plane policies should go to Varun Kumta.<o:p></o:p></li><li class=
+=3D"MsoListParagraph" style=3D"margin-left:0in;mso-list:l0 level1 lfo2">Req=
+uests of the form =E2=80=9Ccheck XXX for any API=E2=80=9D. We don=E2=80=99t=
+ have a way to help with this. Maybe the Microsoft.ApiManagement owners cou=
+ld help?<o:p></o:p></li></ol>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Note that aliases are only created on individual API=
+ properties that are published in the Azure Open API specification on (both=
+) GET response and PUT request bodies (not the Url or parameters, for examp=
+le). Aliases don=E2=80=99t do anything more
+ than point to a property that already exists in the payload/body. So anyth=
+ing that doesn=E2=80=99t already exist would need to be requested from the =
+RP. In some cases, it might be that the RP just needs to publish (in swagge=
+r) something that=E2=80=99s already supported.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Thanks,<o:p></o:p></p>
+<p class=3D"MsoNormal">-=3DChris<o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Chris Stackhouse <br>
+<b>Sent:</b> Monday, October 14, 2019 10:52 AM<br>
+<b>To:</b> Mark Jacobs &lt;majaco@microsoft.com&gt;; Chris Eggert &lt;chegg=
+ert@microsoft.com&gt;; Liz Kim &lt;elkim@microsoft.com&gt;; Akhil Reddy Ale=
+ti &lt;Akhil.Aleti@microsoft.com&gt;; Yue Li &lt;Li.Yue@microsoft.com&gt;<b=
+r>
+<b>Cc:</b> Michelle Swafford &lt;miccohen@microsoft.com&gt;<br>
+<b>Subject:</b> RE: Policy aliases<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I=E2=80=99m able to access now. I=E2=80=99ll go thro=
+ugh these and get back.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Thanks,<o:p></o:p></p>
+<p class=3D"MsoNormal">-=3DChris<o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Mark Jacobs &lt;<a href=3D"mailto:majac=
+o@microsoft.com">majaco@microsoft.com</a>&gt;
+<br>
+<b>Sent:</b> Monday, October 14, 2019 10:44 AM<br>
+<b>To:</b> Chris Stackhouse &lt;<a href=3D"mailto:cstack@microsoft.com">cst=
+ack@microsoft.com</a>&gt;; Chris Eggert &lt;<a href=3D"mailto:cheggert@micr=
+osoft.com">cheggert@microsoft.com</a>&gt;; Liz Kim &lt;<a href=3D"mailto:el=
+kim@microsoft.com">elkim@microsoft.com</a>&gt;; Akhil Reddy
+ Aleti &lt;<a href=3D"mailto:Akhil.Aleti@microsoft.com">Akhil.Aleti@microso=
+ft.com</a>&gt;; Yue Li &lt;<a href=3D"mailto:Li.Yue@microsoft.com">Li.Yue@m=
+icrosoft.com</a>&gt;<br>
+<b>Cc:</b> Michelle Swafford &lt;<a href=3D"mailto:miccohen@microsoft.com">=
+miccohen@microsoft.com</a>&gt;<br>
+<b>Subject:</b> RE: Policy aliases<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Thanks, Chris. See if this link works: <a href=3D"ht=
+tps://nam06.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fdev.azure=
+.com%2FMicrosoftIT%2FOneITVSO%2F_workitems%2Fedit%2F5049276&amp;data=3D02%7=
+C01%7Cmajaco%40microsoft.com%7Ccf4c09e372cc497b52d308d751069726%7C72f988bf8=
+6f141af91ab2d7cd011db47%7C1%7C0%7C637066961053754443&amp;sdata=3DUeK0q4Pf9y=
+Ql%2B0UOQopiIAy8nNWES4bUdd3NiUcIxQU%3D&amp;reserved=3D0" originalsrc=3D"htt=
+ps://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5049276" shash=3D"J=
+&#43;UyqCYGQrz&#43;xQolYnEySw7d56eQ&#43;gR&#43;8TdaIIgc8jy6Q2ZPxzsRz0LPDoGz=
+ByTjzeZ3oZuKf03D8m8C7yjYjdsYOPB9xMOahf5nFkrAVKPxx0lozm4KVMAjGBgavVOg4NA&#43=
+;/JmcJJ474FrkzHVVQCKAmYq/oTIKzGRrijkN6i8=3D">
+https://dev.azure.com/MicrosoftIT/OneITVSO/_workitems/edit/5049276</a><o:p>=
+</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I=E2=80=99ll assemble if you can=E2=80=99t get to th=
+e above; it should be available to all FTEs in Microsoft.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From: </b><a href=3D"mailto:cstack@microsoft.com"=
+>Chris Stackhouse</a><br>
+<b>Sent: </b>Monday, October 14, 2019 9:56 AM<br>
+<b>To: </b><a href=3D"mailto:majaco@microsoft.com">Mark Jacobs</a>; <a href=
+=3D"mailto:cheggert@microsoft.com">
+Chris Eggert</a>; <a href=3D"mailto:elkim@microsoft.com">Liz Kim</a>; <a hr=
+ef=3D"mailto:Akhil.Aleti@microsoft.com">
+Akhil Reddy Aleti</a>; <a href=3D"mailto:Li.Yue@microsoft.com">Yue Li</a><b=
+r>
+<b>Cc: </b><a href=3D"mailto:miccohen@microsoft.com">Michelle Swafford</a><=
+br>
+<b>Subject: </b>RE: Policy aliases<o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">I don=E2=80=99t have access to that link.<o:p></o:p>=
+</p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Can you provide the list of aliases that are needed?=
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Thanks,<o:p></o:p></p>
+<p class=3D"MsoNormal">-=3DChris<o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b>From:</b> Mark Jacobs &lt;<a href=3D"mailto:majac=
+o@microsoft.com">majaco@microsoft.com</a>&gt;
+<br>
+<b>Sent:</b> Monday, October 14, 2019 7:35 AM<br>
+<b>To:</b> Chris Eggert &lt;<a href=3D"mailto:cheggert@microsoft.com">chegg=
+ert@microsoft.com</a>&gt;; Chris Stackhouse &lt;<a href=3D"mailto:cstack@mi=
+crosoft.com">cstack@microsoft.com</a>&gt;; Liz Kim &lt;<a href=3D"mailto:el=
+kim@microsoft.com">elkim@microsoft.com</a>&gt;; Akhil Reddy
+ Aleti &lt;<a href=3D"mailto:Akhil.Aleti@microsoft.com">Akhil.Aleti@microso=
+ft.com</a>&gt;; Yue Li &lt;<a href=3D"mailto:Li.Yue@microsoft.com">Li.Yue@m=
+icrosoft.com</a>&gt;<br>
+<b>Cc:</b> Michelle Swafford &lt;<a href=3D"mailto:miccohen@microsoft.com">=
+miccohen@microsoft.com</a>&gt;<br>
+<b>Subject:</b> RE: Policy aliases<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Adding <a id=3D"OWAAM570C4A1AE0CE42FC890619CA083AEB8=
+D" href=3D"mailto:Akhil.Aleti@microsoft.com">
+<span style=3D"font-family:&quot;Calibri&quot;,sans-serif;text-decoration:n=
+one">@Akhil Reddy Aleti</span></a> and
+<a id=3D"OWAAMB2140AE35306461F80E61A9C59EDB041" href=3D"mailto:Li.Yue@micro=
+soft.com">
+<span style=3D"font-family:&quot;Calibri&quot;,sans-serif;text-decoration:n=
+one">@Yue Li</span></a> to the thread.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Akhil and his team have identified 65 policies block=
+ed due to missing aliases. We are capturing them as child issues to this wo=
+rk item:
+<a href=3D"https://nam06.safelinks.protection.outlook.com/?url=3Dhttps%3A%2=
+F%2Fmicrosoftit.visualstudio.com%2FOneITVSO%2F_workitems%2Fedit%2F5049276%2=
+F&amp;data=3D02%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e372cc497b52d308d7510=
+69726%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637066961053764451&amp;s=
+data=3DUtpPupJsI4acVMooNckVFZYMHpmRtUslT57NoMlZdFs%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://microsoftit.visualstudio.com/OneITVSO/_workitems/edit/5=
+049276/" shash=3D"KmRtWXUkUXySbeOifAnAx93qZFr6qq7V/PJMo8q5Pp3oiSqXR0Cxf7tSA=
+lp5AMp5QBI6&#43;&#43;rsDf5hBj6TJ6egj9J7KbzI5U2OpHw3CrhGURmpierBSWXuUjK4UKBM=
+ZwZcuZi9LsTd413vA3pv&#43;rQT5w/szrt1PFLHuBTCxegXbFQ=3D">
+https://microsoftit.visualstudio.com/OneITVSO/_workitems/edit/5049276/</a> =
+The total number may continue to grow as we analyze the each control.<o:p><=
+/o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">We are now in a big push to convert all of the remai=
+ning DevOps Kit controls to Azure Policy. How do we get these unblocked?<o:=
+p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><img bo=
+rder=3D"0" width=3D"347" height=3D"1" style=3D"width:3.6145in;height:.0104i=
+n" id=3D"Horizontal_x0020_Line_x0020_1" src=3D"cid:image001.png@01D58299.99=
+E81A70" alt=3D"cid:image002.png@01D5827C.4DAA0000"><o:p></o:p></p>
+<div id=3D"divRplyFwdMsg">
+<p class=3D"MsoNormal"><b><span style=3D"color:black">From:</span></b><span=
+ style=3D"color:black"> Mark Jacobs<br>
+<b>Sent:</b> Tuesday, July 23, 2019 9:56:37 AM<br>
+<b>To:</b> Chris Eggert &lt;<a href=3D"mailto:cheggert@microsoft.com">chegg=
+ert@microsoft.com</a>&gt;; Chris Stackhouse &lt;<a href=3D"mailto:cstack@mi=
+crosoft.com">cstack@microsoft.com</a>&gt;; Liz Kim &lt;<a href=3D"mailto:el=
+kim@microsoft.com">elkim@microsoft.com</a>&gt;<br>
+<b>Cc:</b> Michelle Swafford &lt;<a href=3D"mailto:miccohen@microsoft.com">=
+miccohen@microsoft.com</a>&gt;<br>
+<b>Subject:</b> RE: Policy aliases</span> <o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+</div>
+</div>
+<div>
+<div>
+<p class=3D"xmsonormal">Good information. I=E2=80=99ll circle back with Akh=
+il with details.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><img bo=
+rder=3D"0" width=3D"347" height=3D"1" style=3D"width:3.6145in;height:.0104i=
+n" id=3D"Horizontal_x0020_Line_x0020_2" src=3D"cid:image001.png@01D58299.99=
+E81A70" alt=3D"cid:image002.png@01D5827C.4DAA0000"><o:p></o:p></p>
+<div id=3D"x_divRplyFwdMsg">
+<p class=3D"MsoNormal"><b><span style=3D"color:black">From:</span></b><span=
+ style=3D"color:black"> Chris Eggert &lt;<a href=3D"mailto:cheggert@microso=
+ft.com">cheggert@microsoft.com</a>&gt;<br>
+<b>Sent:</b> Tuesday, July 23, 2019 9:27:48 AM<br>
+<b>To:</b> Mark Jacobs &lt;<a href=3D"mailto:majaco@microsoft.com">majaco@m=
+icrosoft.com</a>&gt;; Chris Stackhouse &lt;<a href=3D"mailto:cstack@microso=
+ft.com">cstack@microsoft.com</a>&gt;; Liz Kim &lt;<a href=3D"mailto:elkim@m=
+icrosoft.com">elkim@microsoft.com</a>&gt;<br>
+<b>Cc:</b> Michelle Swafford &lt;<a href=3D"mailto:miccohen@microsoft.com">=
+miccohen@microsoft.com</a>&gt;<br>
+<b>Subject:</b> RE: Policy aliases</span> <o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+</div>
+</div>
+<div>
+<div>
+<p class=3D"xmsonormal"><a id=3D"OWAAM390CF5F5BCD8401DAE95BAC6D008740D" hre=
+f=3D"mailto:cstack@microsoft.com"><span style=3D"font-family:&quot;Calibri&=
+quot;,sans-serif;text-decoration:none">@Chris Stackhouse</span></a>/<a id=
+=3D"OWAAM60DF393566934CB2A7670E807660273A" href=3D"mailto:elkim@microsoft.c=
+om"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;text-decorati=
+on:none">@Liz
+ Kim</span></a><o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Most aliases should exist automatically these days.=
+&nbsp; To determine what properties are needed for the below scenarios some=
+one with more knowledge of the goal and the services involved would have to=
+ indicate what properties on the resource
+ are important for each scenario.&nbsp; I.e. what properties you are trying=
+ to control in a template deployment or a reference to the properties in th=
+e
+<a href=3D"https://nam06.safelinks.protection.outlook.com/?url=3Dhttps%3A%2=
+F%2Fdocs.microsoft.com%2Fen-us%2Frest%2Fapi%2Fapimanagement%2F&amp;data=3D0=
+2%7C01%7Cmajaco%40microsoft.com%7Ccf4c09e372cc497b52d308d751069726%7C72f988=
+bf86f141af91ab2d7cd011db47%7C1%7C0%7C637066961053764451&amp;sdata=3DZm8YlBN=
+X5GkD8auL%2FZMtTK9G5DbCsxlifTqJxB%2BJhK4%3D&amp;reserved=3D0" originalsrc=
+=3D"https://docs.microsoft.com/en-us/rest/api/apimanagement/" shash=3D"HG8W=
+4X5o1kXfrIUOATnOunIPUG8H17zl3edfAe8Ec&#43;DP5wTrXXB6cs7Pik7HEA3y1FV5BaIjjCb=
+cy/ESlyhqempG8EzRn&#43;S&#43;UW&#43;Hk4JsMRa7YUJyoK2hj1u4BDLo2U1Ql/roQrE39d=
+3gOvNeyf5TVWIjLcoJP0fafHsI1&#43;31&#43;4w=3D">
+<span style=3D"color:#0563C1">REST API</span></a>.&nbsp; <o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">The scenarios below are too broad to figure it out =
+without knowledge of how those services are set up.&nbsp; Presumably Akhil =
+would have this information.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"xmsonormal"><b>From:</b> Mark Jacobs &lt;<a href=3D"mailto:maja=
+co@microsoft.com">majaco@microsoft.com</a>&gt;
+<br>
+<b>Sent:</b> Tuesday, July 23, 2019 8:59 AM<br>
+<b>To:</b> Chris Eggert &lt;<a href=3D"mailto:cheggert@microsoft.com">chegg=
+ert@microsoft.com</a>&gt;<br>
+<b>Cc:</b> Michelle Swafford &lt;<a href=3D"mailto:miccohen@microsoft.com">=
+miccohen@microsoft.com</a>&gt;<br>
+<b>Subject:</b> FW: Policy aliases<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Good morning, Chris. Can you help us get missing AR=
+M aliases elevated? We are working to convert many more controls to policy,=
+ and missing aliases will block our progress.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Let me know the best way to move this forward.<o:p>=
+</o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Thanks!<o:p></o:p></p>
+<p class=3D"xmsonormal">Mark<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><img bo=
+rder=3D"0" width=3D"347" height=3D"1" style=3D"width:3.6145in;height:.0104i=
+n" id=3D"Horizontal_x0020_Line_x0020_3" src=3D"cid:image001.png@01D58299.99=
+E81A70" alt=3D"cid:image002.png@01D5827C.4DAA0000"><o:p></o:p></p>
+<div id=3D"x_divRplyFwdMsg">
+<p class=3D"xmsonormal"><b><span style=3D"color:black">From:</span></b><spa=
+n style=3D"color:black"> Akhil Reddy Aleti &lt;<a href=3D"mailto:Akhil.Alet=
+i@microsoft.com"><span style=3D"color:#0563C1">Akhil.Aleti@microsoft.com</s=
+pan></a>&gt;<br>
+<b>Sent:</b> Tuesday, July 23, 2019 8:15:44 AM<br>
+<b>To:</b> Mark Jacobs &lt;<a href=3D"mailto:majaco@microsoft.com"><span st=
+yle=3D"color:#0563C1">majaco@microsoft.com</span></a>&gt;<br>
+<b>Cc:</b> Manish Prabhu &lt;<a href=3D"mailto:manish.prabhu@microsoft.com"=
+><span style=3D"color:#0563C1">manish.prabhu@microsoft.com</span></a>&gt;<b=
+r>
+<b>Subject:</b> RE: Policy aliases</span> <o:p></o:p></p>
+<div>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+</div>
+</div>
+<div>
+<p class=3D"xmsonormal">Hi Mark,<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Found the alias for =E2=80=98<span style=3D"color:#=
+444444;background:white">Azure_APIManagement_DP_Use_HTTPS_URL_Scheme</span>=
+=E2=80=99 control. Below are the final list of controls which require alias=
+es for highlighted parameter names.<o:p></o:p></p>
+<p class=3D"xmsonormal"><b><span style=3D"font-size:14.0pt">&nbsp;</span></=
+b><o:p></o:p></p>
+<p class=3D"xmsonormal"><b><span style=3D"font-size:14.0pt">APIManagement</=
+span></b><o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Azure_APIManagement_AuthN_Verify_Delegated_Authenti=
+cation:<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;&nbsp;Alias to whether there are any <span st=
+yle=3D"color:black;background:yellow">
+delegation</span> endpoints which allows you to use your existing website f=
+or handling developer sign in/sign up and subscription to products, as oppo=
+sed to using the built-in functionality in the developer portal.<o:p></o:p>=
+</p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Azure_APIManagement_AuthN_Disable_Management_API:<o=
+:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;&nbsp; Alias to check API Management <span st=
+yle=3D"color:black;background:yellow">
+REST API</span> is enabled.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Azure_APIManagement_DP_Dont_Checkin_Secrets_In_Sour=
+ce:<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;&nbsp;&nbsp; Alias to check any Git <span sty=
+le=3D"color:black;background:yellow">
+repository</span> is configured and if any commits present.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal"><b><span style=3D"font-size:16.0pt">Databricks</spa=
+n></b><o:p></o:p></p>
+<p class=3D"xmsonormal"><span style=3D"font-size:16.0pt">&nbsp;</span><o:p>=
+</o:p></p>
+<p class=3D"xmsonormal">Azure_Databricks_NetSec_Justify_VNet_Peering:<o:p><=
+/o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp; Alias to find <span style=3D"color:black;bac=
+kground:yellow">
+virtual network peering</span><o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal"><b><span style=3D"font-size:14.0pt">ContainerInstan=
+ces</span></b><o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Azure_ContainerInstances_AuthZ_Container_Segregatio=
+n:<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;&nbsp; Alias to check the <span style=3D"colo=
+r:black;background:yellow">
+containers</span> in a container group.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Thanks,<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp; Akhil<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"xmsonormal"><b>From:</b> Mark Jacobs &lt;<a href=3D"mailto:maja=
+co@microsoft.com"><span style=3D"color:#0563C1">majaco@microsoft.com</span>=
+</a>&gt;
+<br>
+<b>Sent:</b> Thursday, July 18, 2019 8:55 PM<br>
+<b>To:</b> Akhil Reddy Aleti &lt;<a href=3D"mailto:Akhil.Aleti@microsoft.co=
+m"><span style=3D"color:#0563C1">Akhil.Aleti@microsoft.com</span></a>&gt;<b=
+r>
+<b>Cc:</b> Manish Prabhu &lt;<a href=3D"mailto:manish.prabhu@microsoft.com"=
+><span style=3D"color:#0563C1">manish.prabhu@microsoft.com</span></a>&gt;<b=
+r>
+<b>Subject:</b> RE: Policy aliases<o:p></o:p></p>
+</div>
+</div>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Thanks, Akhil! Don=E2=80=99t we also need an alias =
+for this control?
+<span style=3D"color:#444444;background:white">Azure_APIManagement_DP_Use_H=
+TTPS_URL_Scheme</span><o:p></o:p></p>
+<p class=3D"xmsonormal"><span style=3D"color:#444444;background:white">&nbs=
+p;</span><o:p></o:p></p>
+<p class=3D"xmsonormal"><span style=3D"color:#444444;background:white">Typi=
+cally aliases are elevated by resource provider, so if we can capture what =
+we need for API management, we can send them over all at once.</span><o:p><=
+/o:p></p>
+<p class=3D"xmsonormal"><span style=3D"color:#444444;background:white">&nbs=
+p;</span><o:p></o:p></p>
+<p class=3D"xmsonormal"><span style=3D"color:#444444;background:white">Do y=
+ou happen to know the parameter name for each of these that we check via th=
+e controls through the ARM APIs? That will help narrow down which alias is =
+needed.</span><o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><img bo=
+rder=3D"0" width=3D"347" height=3D"1" style=3D"width:3.6145in;height:.0104i=
+n" id=3D"Horizontal_x0020_Line_x0020_4" src=3D"cid:image001.png@01D58299.99=
+E81A70" alt=3D"cid:image002.png@01D5827C.4DAA0000"><o:p></o:p></p>
+<div id=3D"x_divRplyFwdMsg">
+<p class=3D"xmsonormal"><b><span style=3D"color:black">From:</span></b><spa=
+n style=3D"color:black"> Akhil Reddy Aleti &lt;<a href=3D"mailto:Akhil.Alet=
+i@microsoft.com"><span style=3D"color:#0563C1">Akhil.Aleti@microsoft.com</s=
+pan></a>&gt;<br>
+<b>Sent:</b> Thursday, July 18, 2019 5:02:00 AM<br>
+<b>To:</b> Mark Jacobs &lt;<a href=3D"mailto:majaco@microsoft.com"><span st=
+yle=3D"color:#0563C1">majaco@microsoft.com</span></a>&gt;<br>
+<b>Cc:</b> Manish Prabhu &lt;<a href=3D"mailto:manish.prabhu@microsoft.com"=
+><span style=3D"color:#0563C1">manish.prabhu@microsoft.com</span></a>&gt;<b=
+r>
+<b>Subject:</b> Policy aliases</span> <o:p></o:p></p>
+<div>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+</div>
+</div>
+<div>
+<p class=3D"xmsonormal">Hi Mark,<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"xmsonormal">Below are the controls that need aliases. I have al=
+so added notes in =E2=80=98Need to discussion=E2=80=99 controls in the
+<a href=3D"https://nam06.safelinks.protection.outlook.com/ap/x-59584e83/?ur=
+l=3Dhttps%3A%2F%2Fmicrosoft-my.sharepoint.com%2F%3Ax%3A%2Fr%2Fpersonal%2Fma=
+jaco_microsoft_com%2F_layouts%2F15%2FDoc.aspx%3Fsourcedoc%3D%257BCDCD8A6B-4=
+B0C-454B-8893-EAAD70EB4B94%257D%26file%3DEnable%2520Monitoring%2520in%2520A=
+SC%2520Initiative.xlsx%26action%3Ddefault%26mobileredirect%3Dtrue%26cid%3Db=
+e0561c9-9a44-4229-97c2-b093b8a655f0&amp;data=3D02%7C01%7Cmajaco%40microsoft=
+.com%7Ccf4c09e372cc497b52d308d751069726%7C72f988bf86f141af91ab2d7cd011db47%=
+7C1%7C0%7C637066961053774463&amp;sdata=3DJq7VsEwdEUSavoddouuxsviqzgcKIaFjNQ=
+WawVsG90c%3D&amp;reserved=3D0" originalsrc=3D"https://microsoft-my.sharepoi=
+nt.com/:x:/r/personal/majaco_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=
+=3D%7BCDCD8A6B-4B0C-454B-8893-EAAD70EB4B94%7D&amp;file=3DEnable%20Monitorin=
+g%20in%20ASC%20Initiative.xlsx&amp;action=3Ddefault&amp;mobileredirect=3Dtr=
+ue&amp;cid=3Dbe0561c9-9a44-4229-97c2-b093b8a655f0" shash=3D"QHFwzJw2na4hUrh=
+26cRtTQMaq/Y36be9dmiUbgp5G7jS4W&#43;tGixIS/XBodz2cFLTE7COgBsFLyNCGcA/iti5yC=
+8I3yF940YMiXW0YZpGiXKHHAQoCkEiIzsGMo7wUCp7mT0QdO2LXpq2LX/JeBeQn4q8MYe3IiXnE=
+r3bGgXRy1Q=3D">
+<span style=3D"color:#0563C1">sheet</span></a>.<o:p></o:p></p>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt"><b><span style=3D"font-size:1=
+4.0pt">APIManagement</span></b><o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">Azure_APIManagement_AuthN_Ver=
+ify_Delegated_Authentication:
+<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;&nbsp;Alias to whether =
+there are any delegation endpoints which allows you to use your existing we=
+bsite for handling developer sign in/sign up and subscription to products, =
+as opposed to using the built-in functionality
+ in the developer portal.<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">Azure_APIManagement_AuthN_Dis=
+able_Management_API:<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;&nbsp; Alias to check A=
+PI Management REST API is enabled.<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">Azure_APIManagement_DP_Dont_C=
+heckin_Secrets_In_Source:<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;&nbsp;&nbsp; Alias to c=
+heck any Git repo is configured and if any commits present.<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt"><b><span style=3D"font-size:1=
+6.0pt">Databricks</span></b><o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">Azure_Databricks_NetSec_Justi=
+fy_VNet_Peering:&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp; Alias to find virtual =
+network peering<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">Thanks,<o:p></o:p></p>
+<p style=3D"margin:0in;margin-bottom:.0001pt">&nbsp;&nbsp; Akhil<o:p></o:p>=
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class=3D"xmsonormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_41AE2712-C761-4FD3-BA0E-98EBEC53BE29_
+Content-Type: image/png; name="image001.png"
+Content-ID: <image001.png@01D58299.99E81A70>
+Content-Transfer-Encoding: base64
+Content-Disposition: inline; filename="image001.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAVsAAAABCAMAAABHc/36AAAAAXNSR0IArs4c6QAAAANQTFRFv83b
+Bi0mqAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmlj
+ZX/tNXEAAAAOSURBVChTY2AYBbQKAQABXAABIy5GkgAAAABJRU5ErkJggg==
+
+--_41AE2712-C761-4FD3-BA0E-98EBEC53BE29_--
