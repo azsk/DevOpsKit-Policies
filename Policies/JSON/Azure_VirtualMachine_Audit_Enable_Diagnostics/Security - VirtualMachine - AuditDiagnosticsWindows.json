@@ -1,0 +1,27 @@
+{
+  "policyRule": {
+    "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/virtualMachines"
+          },
+          {
+            "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.osType",
+            "equals": "Windows"
+          }
+        ] 
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Compute/virtualMachines/extensions",
+        "existenceCondition": {
+          "field": "Microsoft.Compute/virtualMachines/extensions/type",
+          "equals": "IaaSDiagnostics"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

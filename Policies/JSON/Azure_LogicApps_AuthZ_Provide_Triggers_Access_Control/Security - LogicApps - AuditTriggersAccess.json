@@ -1,0 +1,34 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Logic/workflows"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Logic/workflows/accessControl.triggers.allowedCallerIPAddresses[*].addressRange",
+              "exists": "false"
+            },
+            {
+              "field": "Microsoft.Logic/workflows/accessControl.triggers.allowedCallerIPAddresses[*].addressRange",
+              "equals": ""
+            },
+            {
+              "not": {
+                "field": "Microsoft.Logic/workflows/accessControl.triggers.allowedCallerIPAddresses[*].addressRange",
+                "notEquals": "0.0.0.0-255.255.255.255"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

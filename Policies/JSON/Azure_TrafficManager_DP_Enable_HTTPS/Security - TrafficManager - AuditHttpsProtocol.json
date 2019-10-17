@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/trafficManagerProfiles"
+        },
+        {
+          "field": "Microsoft.Network/trafficmanagerprofiles/monitorConfig.protocol",
+          "notEquals": "HTTPS"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

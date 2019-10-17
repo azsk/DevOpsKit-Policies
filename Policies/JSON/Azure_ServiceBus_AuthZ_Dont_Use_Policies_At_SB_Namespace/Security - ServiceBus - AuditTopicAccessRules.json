@@ -1,0 +1,15 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.ServiceBus/namespaces/topics"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.ServiceBus/namespaces/topics/authorizationRules"
+      }
+    }
+  },
+  "parameters": {}
+}

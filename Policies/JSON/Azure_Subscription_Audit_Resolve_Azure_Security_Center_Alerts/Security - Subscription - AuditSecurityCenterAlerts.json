@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Security/alerts"
+        },
+        {
+          "field": "Microsoft.Security/alerts/state",
+          "equals": "Active"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

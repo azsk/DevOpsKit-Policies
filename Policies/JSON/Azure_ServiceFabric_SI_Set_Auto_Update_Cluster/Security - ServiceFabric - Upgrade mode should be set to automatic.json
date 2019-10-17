@@ -1,0 +1,21 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ServiceFabric/clusters"
+          },
+          {
+            "field": "Microsoft.ServiceFabric/clusters/upgradeMode",
+            "notEquals": "Automatic"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }

@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Search/searchServices"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Search/searchServices/replicaCount",
+              "in": ["", "0", "1", "2"]
+            },
+            {
+              "field": "Microsoft.Search/searchServices/replicaCount",
+              "exists": "false"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

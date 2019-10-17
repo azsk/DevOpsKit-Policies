@@ -1,0 +1,49 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/virtualMachines"
+          },
+          {
+            "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.osType",
+            "equals": "[parameters('osType')]"
+          }
+        ]
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.Compute/virtualMachines/extensions",
+          "existenceCondition": {
+            "allOf": [
+              {
+                "field": "Microsoft.Compute/virtualMachines/extensions/publisher",
+                "equals": "Microsoft.GuestConfiguration"
+              },
+              {
+                "field": "Microsoft.Compute/virtualMachines/extensions/type",
+                "equals": "ConfigurationForWindows"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "parameters": {
+      "osType": {
+        "type": "String",
+        "metadata": {
+          "displayName": "osType",
+          "description": null
+        },
+        "allowedValues": [
+          "Windows",
+          "Linux"
+        ],
+        "defaultValue": "Windows"
+      }
+    }
+  }

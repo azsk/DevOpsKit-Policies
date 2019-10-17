@@ -1,0 +1,31 @@
+{
+  "policyRule": {
+    "if": {
+        "field": "type",
+        "equals": "Microsoft.Network/networkSecurityGroups"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.Network/networkSecurityGroups/securityRules/sourceAddressPrefix",
+              "notEquals": "*"
+            },
+            {
+              "field": "Microsoft.Network/networkSecurityGroups/securityRules/destinationAddressPrefix",
+              "notEquals": "*"
+            },
+            {
+              "field": "Microsoft.Network/networkSecurityGroups/securityRules/access",
+              "notEquals": "Allow"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

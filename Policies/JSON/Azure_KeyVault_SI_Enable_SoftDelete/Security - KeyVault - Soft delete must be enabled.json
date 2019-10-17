@@ -1,0 +1,20 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.KeyVault/vaults"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.KeyVault/vaults",
+        "existenceCondition": {
+          "field": "Microsoft.KeyVault/vaults/enableSoftDelete",
+          "equals": "true"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

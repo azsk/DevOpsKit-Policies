@@ -1,0 +1,19 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Resources/subscriptions"
+    },
+    "then": {    
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Insights/ActivityLogAlerts",
+	      "existenceCondition": {	
+		      "field": "name",
+		      "equals": "AzSK_KeyVault_Alert"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

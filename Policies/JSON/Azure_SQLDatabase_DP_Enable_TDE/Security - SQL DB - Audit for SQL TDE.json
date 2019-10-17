@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Sql/servers/databases"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+        "name": "current",
+        "existenceCondition": {
+          "field": "Microsoft.Sql/transparentDataEncryption.status",
+          "equals": "Enabled"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}
