@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Web/sites"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Web/sites/serverFarmId",
+              "exists": "false"
+            },
+            {
+              "field": "Microsoft.Web/sites/serverFarmId",
+              "equals": ""
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

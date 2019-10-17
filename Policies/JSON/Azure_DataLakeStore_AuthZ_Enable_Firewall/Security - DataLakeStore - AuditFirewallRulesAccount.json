@@ -1,0 +1,40 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DataLakeStore/accounts"  
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.DataLakeStore/accounts/firewallState",
+              "notEquals": "Enabled"  
+            },
+            {
+              "allOf": [
+                {
+                  "not": {
+                    "field": "Microsoft.DataLakeStore/accounts/firewallRules[*].startIpAddress",
+                    "notEquals": "0.0.0.0"  
+                  }
+                },  
+                {
+                  "not": {
+                    "field": "Microsoft.DataLakeStore/accounts/firewallRules[*].endIpAddress",
+                    "notEquals": "255.255.255.255"  
+                  }
+                } 
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

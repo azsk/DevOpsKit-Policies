@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DocumentDb/databaseAccounts"
+        },
+        {
+          "field": "Microsoft.DocumentDb/databaseAccounts/readLocations[*].locationName",
+          "equals": "[field('Microsoft.DocumentDb/databaseAccounts/writeLocations[*].locationName')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

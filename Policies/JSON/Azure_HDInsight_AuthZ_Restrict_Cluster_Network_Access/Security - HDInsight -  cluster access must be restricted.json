@@ -1,0 +1,29 @@
+{
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.HDInsight/clusters"
+          },
+          {
+            "anyOf": [
+              {
+                "not": {
+                  "field": "Microsoft.HDInsight/clusters/computeProfile.roles[*].virtualNetworkProfile.subnet",
+                  "notEquals": ""
+                }
+              },
+              {
+                "field": "Microsoft.HDInsight/clusters/computeProfile.roles[*].virtualNetworkProfile.subnet",
+                "exists": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Web/sites"
+        },
+        {
+          "not": {
+            "field": "Microsoft.Web/sites/hostNameSslStates[*].sslState",
+            "notEquals": "disabled"
+          }
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

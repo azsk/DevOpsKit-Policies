@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DocumentDb/databaseAccounts"
+        },
+        {
+          "field": "Microsoft.DocumentDb/databaseAccounts/consistencyPolicy.defaultConsistencyLevel",
+          "equals": "Eventual"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

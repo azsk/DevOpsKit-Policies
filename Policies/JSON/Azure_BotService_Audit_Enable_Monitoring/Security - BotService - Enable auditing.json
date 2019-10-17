@@ -1,0 +1,28 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.BotService/botServices"
+        }
+      ]
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.BotService/botServices",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.BotService/botServices/developerAppInsightsApplicationId",
+              "like": "*"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

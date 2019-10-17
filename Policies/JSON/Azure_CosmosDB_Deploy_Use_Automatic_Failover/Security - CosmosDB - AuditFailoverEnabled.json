@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DocumentDb/databaseAccounts"
+        },
+        {
+          "field": "Microsoft.DocumentDb/databaseAccounts/enableAutomaticFailover",
+          "equals": "false"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

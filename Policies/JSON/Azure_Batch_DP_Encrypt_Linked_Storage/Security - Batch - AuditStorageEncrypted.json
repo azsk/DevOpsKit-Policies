@@ -1,0 +1,29 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Batch/batchAccounts"
+        },
+        {
+          "field": "Microsoft.Batch/batchAccounts/autoStorage.storageAccountId",
+          "notContains": "[concat('/resourcegroups/', parameters('storageResourceGroup'), '/')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {
+    "storageResourceGroup": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Allowed storage resource group",
+        "description": "Resource group containing encrypted storage accounts.",
+        "strongType": "ExistingResourceGroups"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.HDInsight/clusters"
+        },
+        {
+          "field": "Microsoft.HDInsight/clusters/clusterVersion",
+          "like": "[parameters('MinAllowedVersion')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {
+    "MinAllowedVersion": {
+      "type": "String",
+      "metadata": {
+        "displayName": "MinAllowedVersion",
+        "description": null
+      },
+      "defaultValue": "3.6.*"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Web/sites"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.web/sites/config",
+        "existenceCondition": {
+          "field": "Microsoft.Web/sites/config/alwaysOn",
+          "equals": "true"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

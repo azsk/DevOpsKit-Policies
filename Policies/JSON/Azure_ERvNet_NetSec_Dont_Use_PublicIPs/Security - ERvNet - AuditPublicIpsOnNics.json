@@ -1,0 +1,37 @@
+{
+   "policyRule": {
+      "if": {
+         "allOf": [
+            {
+               "field": "type",
+               "equals": "Microsoft.Network/networkInterfaces"
+            },
+            {
+               "not": {
+                  "field": "Microsoft.Network/networkInterfaces/ipconfigurations[*].subnet.id",
+                  "notContains": "[concat('/resourcegroups/', parameters('expressRouteResourceGroup'), '/')]"
+               }
+            },
+            {
+               "not": {
+                  "field": "Microsoft.Network/networkInterfaces/ipconfigurations[*].publicIpAddress.id",
+                  "notLike": "*"
+               }
+            }
+         ]
+      },
+      "then": {
+         "effect": "audit"
+      }
+   },
+   "parameters": {
+      "expressRouteResourceGroup": {
+         "type": "String",
+         "metadata": {
+            "displayName": "Express Route Resource Group",
+            "description": "The name of the resource group that contains Express Route Virtual Networks.",
+            "strongType": "existingResourceGroups"
+         }
+      }
+   }
+}

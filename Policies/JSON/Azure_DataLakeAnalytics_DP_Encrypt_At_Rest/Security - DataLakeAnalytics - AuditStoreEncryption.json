@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DataLakeStore/accounts"  
+        },
+        {
+          "field": "Microsoft.DataLakeStore/accounts/encryptionState",
+          "notEquals": "Enabled"  
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,18 @@
+{
+    "policyRule": {
+        "if": {
+            "field": "type",
+            "equals": "Microsoft.ApiManagement/service"
+        },
+        "then": {
+            "effect": "auditIfNotExists",
+            "details": {
+                "type": "Microsoft.ApiManagement/service/products",
+                "existenceCondition": {
+                    "field": "Microsoft.ApiManagement/service/products/subscriptionRequired",
+                    "equals": "true"
+                }
+            }
+        }
+    }
+}

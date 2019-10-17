@@ -1,0 +1,35 @@
+{
+   "policyRule": {
+      "if": {
+         "allOf": [
+            {
+               "field": "type",
+               "equals": "Microsoft.Network/loadBalancers"
+            },
+            {
+               "not": {
+                  "field": "Microsoft.Network/loadBalancers/frontendIPConfigurations[*].subnet.id",
+                  "notContains": "[concat('/resourcegroups/', parameters('expressRouteResourceGroup'), '/')]"
+               }
+            },
+            {
+               "field": "Microsoft.Network/loadBalancers/frontendIPConfigurations[*].publicIpAddress.id",
+               "notEquals": ""
+            }
+         ]
+      },
+      "then": {
+         "effect": "audit"
+      }
+   },
+   "parameters": {
+      "expressRouteResourceGroup": {
+         "type": "String",
+         "metadata": {
+            "displayName": "Express Route Resource Groups",
+            "description": "The name of the resource group that contains Express Route Virtual Networks.",
+            "strongType": "existingResourceGroups"
+         }
+      }
+   }
+}

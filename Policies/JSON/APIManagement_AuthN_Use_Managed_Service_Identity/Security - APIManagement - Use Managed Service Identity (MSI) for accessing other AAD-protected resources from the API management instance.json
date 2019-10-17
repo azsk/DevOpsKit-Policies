@@ -1,0 +1,20 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.ApiManagement/service"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.ApiManagement/service",
+          "existenceCondition": {
+            "field": "identity.type",
+            "equals": "SystemAssigned"
+          }
+        }
+      }
+    },
+    "parameters": {}
+  }

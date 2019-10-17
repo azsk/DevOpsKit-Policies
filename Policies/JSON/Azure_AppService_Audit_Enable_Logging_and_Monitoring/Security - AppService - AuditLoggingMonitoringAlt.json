@@ -1,0 +1,31 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Web/sites"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.web/sites/config",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.Web/sites/config/detailedErrorLoggingEnabled",
+              "equals": "true"
+            },
+            {
+              "field": "Microsoft.Web/sites/config/httpLoggingEnabled",
+              "equals": "true"
+            },
+            {
+              "field": "Microsoft.Web/sites/config/requestTracingEnabled",
+              "equals": "true"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,32 @@
+{
+   "policyRule": {
+      "if": {
+         "allOf": [
+            {
+               "field": "type",
+               "equals": "Microsoft.Web/sites/config"
+            },
+            {
+               "field": "name",
+               "equals": "web"
+            },
+            {
+               "field": "Microsoft.Web/sites/config/netFrameworkVersion",
+               "notLike": "[concat(parameters('latestNetVersion'), '*')]"
+            }
+         ]
+      },
+      "then": {
+         "effect": "audit"
+      }
+   },
+   "parameters": {
+      "latestNetVersion": {
+         "type": "String",
+         "metadata": {
+            "displayName": "Latest .Net Version",
+            "description": "The latest .Net version that must be used (e.g. 'v4.0'). Note that 'v4.7' in the Portal maps to 'v4.0' in the API."
+         }
+      }
+   }
+}

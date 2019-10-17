@@ -1,0 +1,57 @@
+"policyRule": {
+    "if": {
+        "anyOf": [
+            {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Web/sites"
+                    },
+                    {
+                        "field": "Microsoft.Web/sites/siteConfig.minTlsVersion",
+                        "less": "1.2"
+                    }
+                ]
+            },
+            {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Web/sites/config"
+                    },
+                    {
+                        "field": "Microsoft.Web/sites/config/minTlsVersion",
+                        "less": "1.2"
+                    }
+                ]
+            },
+            {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Web/sites/slots"
+                    },
+                    {
+                        "field": "Microsoft.Web/sites/slots/siteConfig.minTlsVersion",
+                        "less": "1.2"
+                    }
+                ]
+            },
+            {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.Web/sites/slots/config"
+                    },
+                    {
+                        "field": "Microsoft.Web/sites/slots/config/minTlsVersion",
+                        "less": "1.2"
+                    }
+                ]
+            }
+        ]
+    },
+    "then": {
+        "effect": "audit"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ContainerInstance/containerGroups"
+        },
+        {
+          "field": "Microsoft.ContainerInstance/containerGroups/ipAddress.ip",
+          "exists": "true"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}
