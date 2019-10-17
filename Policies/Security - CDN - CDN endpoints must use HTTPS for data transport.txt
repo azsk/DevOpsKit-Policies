@@ -1,0 +1,38 @@
+{ 
+"properties": { 
+"displayName": "Azure_CDN_DP_Enable_Https", 
+"description": "CDN endpoints must use HTTPS protocol while providing data to the client browser/machine or while fetching data from the origin server.", 
+"mode": "all", 
+"parameters": { 
+"effectType": { 
+"type": "string", 
+"defaultValue": "Audit", 
+"allowedValues": [ 
+"Audit", 
+"Disabled" 
+], 
+"metadata": { 
+"displayName": "Effect", 
+"description": "Enable or disable the execution of the policy" 
+} 
+} 
+}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "microsoft.cdn/profiles/endpoints" 
+}, 
+{ 
+"field": "microsoft.cdn/profiles/endpoints/isHttpAllowed", 
+"equals": true 
+} 
+] 
+}, 
+"then": { 
+"effect": "[parameters('effectType')]" 
+} 
+} 
+} 
+} 

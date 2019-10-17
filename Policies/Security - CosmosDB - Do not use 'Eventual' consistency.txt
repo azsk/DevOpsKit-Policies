@@ -1,0 +1,25 @@
+{ 
+"properties": { 
+"displayName": "Azure_CosmosDB_Config_Default_Consistency", 
+"description": "Using Eventual consistency might cause undesired effects due to its ordering guarantees. This consistency is the weakest of all and the values returned in reads are always not guaranteed to be latest write.", 
+"mode": "all", 
+"parameters": {}, 
+"policyRule": { 
+"if": { 
+"allOf": [ 
+{ 
+"field": "type", 
+"equals": "Microsoft.DocumentDB/databaseAccounts" 
+}, 
+{ 
+"field": "Microsoft.DocumentDB/databaseAccounts/consistencyPolicy.defaultConsistencyLevel", 
+"equals": "Eventual"  
+} 
+] 
+}, 
+"then": { 
+"effect": "audit" 
+} 
+} 
+} 
+} 
