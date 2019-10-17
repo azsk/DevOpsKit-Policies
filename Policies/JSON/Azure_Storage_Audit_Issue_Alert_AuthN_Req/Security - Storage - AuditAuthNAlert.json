@@ -1,0 +1,48 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Storage/storageAccounts"
+        },
+        {
+          "field": "Microsoft.Storage/storageAccounts/sku.name",
+          "in": ["StandardGRS", "StandardLRS", "StandardRAGRS"]
+        }
+      ]
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Insights/alertRules",
+        "existenceScope": "Subscription",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.Insights/alertRules/isEnabled",
+              "equals": "true"
+            },
+            {
+              "field": "Microsoft.Insights/alertRules/condition.dataSource.metricName",
+              "equals": "[parameters('metricName')]"
+            },
+            {
+              "field": "Microsoft.Insights/alertRules/condition.dataSource.resourceUri",
+              "equals": "[concat('/subscriptions/', subscription().subscriptionId, '/resourcegroups/', resourceGroup().name, '/providers/Microsoft.Storage/storageAccounts/', field('name'))]"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {
+    "metricName": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Metric name",
+        "description": "The metric name that an alert rule must be enabled on."
+      }
+    }
+  }
+}

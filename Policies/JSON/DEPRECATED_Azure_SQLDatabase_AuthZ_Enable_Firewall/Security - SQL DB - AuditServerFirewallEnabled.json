@@ -1,0 +1,27 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Sql/servers"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Sql/servers/firewallRules",
+        "existenceCondition": {
+           "anyOf": [
+              {
+                 "field": "Microsoft.Sql/servers/firewallRules/startIpAddress",
+                 "notEquals": "0.0.0.0"
+              },
+              {
+                 "field": "Microsoft.Sql/servers/firewallRules/endIpAddress",
+                 "notEquals": "0.0.0.0"
+              }
+           ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

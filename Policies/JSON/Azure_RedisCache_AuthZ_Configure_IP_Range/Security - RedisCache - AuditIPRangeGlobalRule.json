@@ -1,0 +1,24 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Cache/redis/firewallRules"
+        },
+        {
+          "field": "Microsoft.Cache/redis/firewallRules/startIP",
+          "equals": "0.0.0.0"
+        },
+        {
+          "field": "Microsoft.Cache/redis/firewallRules/endIP",
+          "equals": "255.255.255.255"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

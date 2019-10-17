@@ -1,0 +1,23 @@
+{
+   "policyRule": {
+      "if": {
+         "anyOf": [
+            {
+               "field": "type",
+               "equals": "Microsoft.Resources/subscriptions"
+            },
+            {
+               "source": "action",
+               "equals": "Microsoft.Resources/subscriptions/write"
+            }
+         ]
+      },
+      "then": {
+         "effect": "auditIfNotExists",
+         "details": {
+            "type": "Microsoft.Authorization/locks"
+         }
+      }
+   },
+   "parameters": {}
+}

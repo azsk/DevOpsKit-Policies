@@ -1,0 +1,15 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Cache/redis"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Cache/redis/firewallRules"
+      }
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Cache/redis"
+        },
+        {
+          "field": "Microsoft.Cache/Redis/enableNonSslPort",
+          "equals": "true"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

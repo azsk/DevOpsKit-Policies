@@ -1,0 +1,33 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "anyOf": [
+              {
+                "not": {
+                  "field": "tags",
+                  "containsKey": "ComponentID"
+                }
+              },
+              {
+                "not": {
+                  "field": "tags",
+                  "containsKey": "ComponentID"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }

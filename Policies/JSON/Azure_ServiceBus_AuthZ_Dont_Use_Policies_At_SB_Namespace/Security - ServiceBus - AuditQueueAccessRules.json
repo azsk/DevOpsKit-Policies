@@ -1,0 +1,15 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.ServiceBus/namespaces/queues"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.ServiceBus/namespaces/queues/authorizationRules"
+      }
+    }
+  },
+  "parameters": {}
+}

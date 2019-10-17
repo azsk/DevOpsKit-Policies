@@ -1,0 +1,12 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.classicCompute/virtualMachines"
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

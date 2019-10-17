@@ -1,0 +1,20 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Sql/servers"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Sql/servers/auditingSettings",
+        "name": "default",
+        "existenceCondition": {
+          "field": "Microsoft.Sql/auditingSettings.state",
+          "equals": "Enabled"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "anyOf": [
+        {
+          "field": "type",
+          "like": "Microsoft.classicCompute/*"
+        },
+        {
+          "field": "type",
+          "like": "Microsoft.classicStorage/*"
+        },
+        {
+          "field": "type",
+          "like": "Microsoft.classicNetwork/*"
+        },
+        {
+          "field": "type",
+          "like": "Microsoft.Backup/*"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

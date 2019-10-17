@@ -1,0 +1,36 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Sql/servers"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Sql/servers/securityAlertPolicies",
+        "name": "default",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.Sql/securityAlertPolicies.emailAccountAdmins",
+              "equals": "Enabled"
+            },
+            {
+              "anyOf": [
+                {
+                  "field": "Microsoft.Sql/securityAlertPolicies.disabledAlerts",
+                  "exists": "false"
+                },
+                {
+                  "field": "Microsoft.Sql/securityAlertPolicies.disabledAlerts",
+                  "equals": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

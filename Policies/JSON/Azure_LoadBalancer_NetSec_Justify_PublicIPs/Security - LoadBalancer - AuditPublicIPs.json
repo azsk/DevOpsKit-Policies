@@ -1,0 +1,22 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/loadBalancers"
+        },
+        {
+          "not": {
+            "field": "Microsoft.Network/loadBalancers/frontendIPConfigurations[*].publicIPAddress.id",
+            "notLike": "*"
+          }
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

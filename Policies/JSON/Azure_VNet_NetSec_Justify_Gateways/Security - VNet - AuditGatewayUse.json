@@ -1,0 +1,22 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/virtualNetworks"
+        },
+        {
+          "not": {
+            "field": "Microsoft.Network/virtualNetworks/subnets[*].ipConfigurations[*].id",
+            "notContains": "/Microsoft.Network/VirtualNetworkGateways/"
+          }
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

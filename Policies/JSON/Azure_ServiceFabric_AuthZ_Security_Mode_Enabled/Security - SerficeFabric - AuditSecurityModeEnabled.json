@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ServiceFabric/clusters"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.ServiceFabric/clusters/certificate.thumbprint",
+              "exists": "false"
+            },
+            {
+              "field": "Microsoft.ServiceFabric/clusters/certificate.thumbprint",
+              "equals": ""
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

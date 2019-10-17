@@ -1,0 +1,15 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Sql/servers"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Sql/servers/administrators"
+      }
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,32 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Compute/virtualMachines"
+        },
+        {
+          "field": "Microsoft.Compute/virtualMachines/imageOffer",
+          "equals": "WindowsServer"
+        },
+        {
+          "field": "Microsoft.Compute/virtualMachines/imageSku",
+          "notIn": "[parameters('allowedSkus')]"
+        }
+      ] 
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {
+    "allowedSkus": {
+      "type": "Array",
+      "metadata": {
+        "displayName": "Allowed Windows Skus",
+        "description": "List of allowed operating system SKUs."
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Sql/servers"
+        },
+        {
+          "field": "Microsoft.Sql/servers/version",
+          "notEquals": "[parameters('latestVersion')]"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {
+    "latestVersion": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Required SQL Server Version",
+        "description": "The latest SQL Server version that is required to be deployed."
+      }
+    }
+  }
+}

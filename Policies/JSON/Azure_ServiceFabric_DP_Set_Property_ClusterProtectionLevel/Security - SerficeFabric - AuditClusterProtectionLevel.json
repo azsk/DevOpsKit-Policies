@@ -1,0 +1,32 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ServiceFabric/clusters"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.ServiceFabric/clusters/fabricSettings[*].name",
+              "notEquals": "Security"
+            },
+            {
+              "field": "Microsoft.ServiceFabric/clusters/fabricSettings[*].parameters[*].name",
+              "notEquals": "ClusterProtectionLevel"
+            },
+            {
+              "field": "Microsoft.ServiceFabric/clusters/fabricSettings[*].parameters[*].value",
+              "notEquals": "EncryptAndSign"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

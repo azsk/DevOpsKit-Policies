@@ -1,0 +1,34 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/virtualNetworks"
+        },
+        {
+          "field": "tags",
+          "containsKey": "clusterName"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Network/virtualNetworks/subnets[*].networkSecurityGroup.id",
+              "exists": "false"
+            },
+            {
+              "not": {
+                "field": "Microsoft.Network/virtualNetworks/subnets[*].networkSecurityGroup.id",
+                "notEquals": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

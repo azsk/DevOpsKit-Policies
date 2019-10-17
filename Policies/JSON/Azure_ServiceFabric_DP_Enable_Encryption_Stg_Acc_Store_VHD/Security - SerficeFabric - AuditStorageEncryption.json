@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Storage/storageAccounts"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.Storage/storageAccounts/enableBlobEncryption",
+              "equals": "false"
+            },
+            {
+              "field": "Microsoft.Storage/storageAccounts/enableFileEncryption",
+              "equals": "false"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

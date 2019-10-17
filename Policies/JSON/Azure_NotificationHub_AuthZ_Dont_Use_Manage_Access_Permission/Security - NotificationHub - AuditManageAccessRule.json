@@ -1,0 +1,22 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules"
+        },
+        {
+          "not": {
+            "field": "Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules/rights[*]",
+            "notEquals": "Manage"
+          }
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}
