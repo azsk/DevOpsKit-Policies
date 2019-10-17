@@ -1,0 +1,24 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "notLike": "Microsoft.Network/*"
+        },
+        {
+          "field": "type",
+          "notIn": [
+            "Microsoft.Authorization/policyAssignments",
+            "Microsoft.Resources/subscriptions/resourceGroups",
+            "Microsoft.Security/policies"
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

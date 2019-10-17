@@ -1,0 +1,28 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DataFactory/factories"
+        }
+      ]
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.DataFactory/factories/linkedservices",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.DataFactory/factories/linkedservices/typeProperties.useEncryptedEndpoints",
+              "equals": "true"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

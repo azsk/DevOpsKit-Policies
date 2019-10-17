@@ -1,0 +1,15 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.EventHub/namespaces/eventhubs"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.EventHub/namespaces/eventHubs/authorizationRules"
+      }
+    }
+  },
+  "parameters": {}
+}

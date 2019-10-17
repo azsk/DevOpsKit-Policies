@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.KeyVault/vaults"
+        },
+        {
+          "field": "Microsoft.KeyVault/vaults/enableForDeployment",
+          "equals": "true"
+        },
+        {
+          "field": "Microsoft.KeyVault/vaults/enableForDiskEncryption",
+          "equals": "true"
+        },
+        {
+          "field": "Microsoft.KeyVault/vaults/enableForTemplateDeployment",
+          "equals": "true"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

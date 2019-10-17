@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Authorization/locks",
+        "existenceCondition": {
+          "field": "Microsoft.Authorization/locks/level",
+          "equals": "[parameters('expressRouteLockLevel')]"
+        }
+      }
+    }
+  },
+  "parameters": {
+    "expressRouteLockLevel": {
+      "type": "String",
+      "allowedValues": ["CanNotDelete", "ReadOnly"],
+      "metadata": {
+        "displayName": "Lock level",
+        "description": "Required lock level for ExpressRoute resource groups."
+      }
+    }
+  }
+}

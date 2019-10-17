@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DocumentDb/databaseAccounts"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.DocumentDb/databaseAccounts/ipRangeFilter",
+              "equals": ""
+            },
+            {
+              "field": "Microsoft.DocumentDb/databaseAccounts/ipRangeFilter",
+              "exists": "false"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

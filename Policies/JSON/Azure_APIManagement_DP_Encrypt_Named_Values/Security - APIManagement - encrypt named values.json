@@ -1,0 +1,22 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ApiManagement/service/properties"
+          },
+          {
+            "field": "Microsoft.ApiManagement/service/properties/secret",
+            "notEquals": "true"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }
+  

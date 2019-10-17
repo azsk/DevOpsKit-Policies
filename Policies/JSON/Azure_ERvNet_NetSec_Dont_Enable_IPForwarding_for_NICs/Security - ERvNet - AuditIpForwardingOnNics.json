@@ -1,0 +1,35 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/networkInterfaces"
+        },
+        {
+          "not": {
+            "field": "Microsoft.Network/networkInterfaces/ipconfigurations[*].subnet.id",
+            "notContains": "[concat('/resourcegroups/', parameters('expressRouteResourceGroup'), '/')]"
+          }
+        },
+        {
+          "field": "Microsoft.Network/networkInterfaces/enableIpForwarding",
+          "equals": "true"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {
+    "expressRouteResourceGroup": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Express Route Resource Groups",
+        "description": "The name of the resource group that contains Express Route Virtual Networks.",
+        "strongType": "existingResourceGroups"
+      }
+    }
+  }
+}

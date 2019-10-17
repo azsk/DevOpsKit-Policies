@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Network/virtualNetworks/subnets"
+        },
+        {
+          "field": "name",
+          "equals": "GatewaySubnet"
+        },
+        {
+          "field": "Microsoft.Network/virtualNetworks/subnets/networkSecurityGroup.id",
+          "exists": "true"
+        },
+        {
+          "field": "Microsoft.Network/virtualNetworks/subnets/networkSecurityGroup.id",
+          "notEquals": ""
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

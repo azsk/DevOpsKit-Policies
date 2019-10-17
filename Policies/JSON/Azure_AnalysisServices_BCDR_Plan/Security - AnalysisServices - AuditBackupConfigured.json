@@ -1,0 +1,28 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.AnalysisServices/servers"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.AnalysisServices/servers/backupBlobContainerUri",
+              "exists": "false"
+            },
+            {
+              "field": "Microsoft.AnalysisServices/servers/backupBlobContainerUri",
+              "equals": ""
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

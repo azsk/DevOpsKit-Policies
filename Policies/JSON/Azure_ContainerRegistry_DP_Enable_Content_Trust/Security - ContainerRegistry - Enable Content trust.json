@@ -1,0 +1,28 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ContainerRegistry/registries"
+        }
+      ]
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.ContainerRegistry/registries",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.ContainerRegistry/registries/policies.trustPolicy.status",
+              "equals": "enabled"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,24 @@
+{
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.DataLakeStore/accounts/firewallRules"  
+        },
+        {
+          "field": "Microsoft.DataLakeStore/accounts/firewallRules/endIpAddress",
+          "equals": "255.255.255.255"
+        },
+        {
+          "field": "Microsoft.DataLakeStore/accounts/firewallRules/startIpAddress",
+          "equals": "0.0.0.0"
+        } 
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}
