@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "displayName": "Security - Kubernetes - Kubernetes Clusters should enable RBAC",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Enabling RBAC in a cluster lets you finely control access to various operations at the cluster/node/pod/namespace scopes for different stakeholders. Without RBAC enabled, every user has full access to the cluster which is a violation of the principle of least privilege.\n\nRBAC flag must be enabled while creating the Kubernetes Service. Existing non-RBAC enabled Kubernetes Service clusters cannot currently be updated for RBAC use. Refer: https://docs.microsoft.com/en-us/azure/aks/aad-integration.",
+    "metadata": {
+      "category": "Security Center",
+      "createdBy": "4902f72f-b6f2-4189-a012-28da9bfed218",
+      "createdOn": "2019-09-06T23:43:33.8285027Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ContainerService/managedClusters"
+          },
+          {
+            "field": "Microsoft.ContainerService/managedClusters/enableRBAC",
+            "equals": false
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  },
+  "id": "/providers/Microsoft.Management/managementGroups/Digital_Security_and_Risk_Engineering/providers/Microsoft.Authorization/policyDefinitions/f5936ff5-7bcb-4e1b-9886-3888ee2b4f64",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "f5936ff5-7bcb-4e1b-9886-3888ee2b4f64"
+}

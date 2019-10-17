@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "displayName": "Security - Kubernetes - Kubernetes Clusters should enable AAD authentication",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Using the native enterprise directory for authentication ensures that there is a built-in high level of assurance in the user identity established for subsequent access control.All Enterprise subscriptions are automatically associated with their enterprise directory (xxx.onmicrosoft.com) and users in the native directory are trusted for authentication to enterprise subscriptions.\n\nRefer: https://docs.microsoft.com/en-us/azure/aks/aad-integration to configure AAD in Kubernetes Service.",
+    "metadata": {
+      "category": "Security Center",
+      "createdBy": "4902f72f-b6f2-4189-a012-28da9bfed218",
+      "createdOn": "2019-09-06T23:45:52.3942248Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ContainerService/managedClusters"
+          },
+          {
+            "field": "Microsoft.ContainerService/managedClusters/aadProfile",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  },
+  "id": "/providers/Microsoft.Management/managementGroups/Digital_Security_and_Risk_Engineering/providers/Microsoft.Authorization/policyDefinitions/274bb021-eced-4864-be83-8f94bf12020b",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "274bb021-eced-4864-be83-8f94bf12020b"
+}
