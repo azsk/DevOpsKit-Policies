@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "displayName": "Security - Subscription - ASC Standard Pricing Tier should be enabled",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "Azure Security Center (ASC) standard tier enables advanced threat detection capabilities, which uses built-in behavioral analytics and machine learning to identify attacks and zero-day exploits, access and application controls to reduce exposure to network attacks and malware, and more. Refer: https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing",
+    "metadata": {
+      "category": "Security Center",
+      "createdBy": "4902f72f-b6f2-4189-a012-28da9bfed218",
+      "createdOn": "2019-09-06T21:35:22.6947809Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Security/pricings"
+          },
+          {
+            "field": "Microsoft.Security/pricings/pricingTier",
+            "notEquals": "Standard"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  },
+  "id": "/providers/Microsoft.Management/managementGroups/Digital_Security_and_Risk_Engineering/providers/Microsoft.Authorization/policyDefinitions/935841ed-0fea-434a-bf7e-4766082e2f5d",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "935841ed-0fea-434a-bf7e-4766082e2f5d"
+}

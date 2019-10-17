@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "displayName": "Security - CDN - CDN endpoints must use HTTPS for data transport",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "CDN endpoints must use HTTPS protocol while providing data to the client browser/machine or while fetching data from the origin server.\n\nTo enable HTTPS protocol: Go to Azure Portal --> your CDN Profile --> your CDN Endpoint --> Origin --> Select HTTPS --> Save. Else implement through PowerShell as follows: $ce= Get-AzCdnEndpoint -EndpointName <EndpointName> -ProfileName <CDNprofile> -ResourceGroupName <RGName>; $ce.IsHttpAllowed =$false; $ce.IsHttpsAllowed =$true; Set-AzCdnEndpoint -CdnEndpoint $ce",
+    "metadata": {
+      "category": "Security Center",
+      "createdBy": "4902f72f-b6f2-4189-a012-28da9bfed218",
+      "createdOn": "2019-09-06T22:42:42.2219333Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {
+      "effectType": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      }
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "microsoft.cdn/profiles/endpoints"
+          },
+          {
+            "field": "microsoft.cdn/profiles/endpoints/isHttpAllowed",
+            "equals": true
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effectType')]"
+      }
+    }
+  },
+  "id": "/providers/Microsoft.Management/managementGroups/Digital_Security_and_Risk_Engineering/providers/Microsoft.Authorization/policyDefinitions/111cd8db-3507-49a9-b573-50a8973a1825",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "111cd8db-3507-49a9-b573-50a8973a1825"
+}

@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "displayName": "Security - ContainerRegistry - Container registries must disable the admin account",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "The Admin account in Container Registry should be disabled. Using AAD-based identity ensures that there is a built-in high level of assurance in the user identity established for subsequent access control.\n\nRun command 'Update-AzContainerRegistry -DisableAdminUser -Name '<ContainerRegistryName>' -ResourceGroupName '<RGName>'. Run 'Get-Help Update-AzContainerRegistry -full' for more help. You can add AAD-based SPNs or user accounts to the appropriate RBAC role instead.",
+    "metadata": {
+      "category": "Security Center",
+      "createdBy": "4902f72f-b6f2-4189-a012-28da9bfed218",
+      "createdOn": "2019-09-06T22:52:00.0540488Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ContainerRegistry/registries"
+          },
+          {
+            "field": "Microsoft.ContainerRegistry/registries/adminUserEnabled",
+            "equals": true
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  },
+  "id": "/providers/Microsoft.Management/managementGroups/Digital_Security_and_Risk_Engineering/providers/Microsoft.Authorization/policyDefinitions/54a74afb-6145-4072-a86f-a7043e4ba0f6",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "54a74afb-6145-4072-a86f-a7043e4ba0f6"
+}
