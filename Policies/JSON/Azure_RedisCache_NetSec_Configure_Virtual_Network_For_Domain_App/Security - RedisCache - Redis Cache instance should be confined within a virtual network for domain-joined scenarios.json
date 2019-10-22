@@ -1,0 +1,21 @@
+{
+  "mode": "All",
+  "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Cache/Redis"
+          },
+          {
+            "field": "Microsoft.Cache/Redis/subnetId",
+            "exists": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+  "parameters": {}
+}

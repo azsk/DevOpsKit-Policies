@@ -1,0 +1,21 @@
+{
+  "mode": "All",
+  "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ApiManagement/service/products"
+          },
+          {
+            "field": "Microsoft.ApiManagement/service/products/approvalRequired",
+            "equals": "false"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+  },
+  "parameters": {}
+}
