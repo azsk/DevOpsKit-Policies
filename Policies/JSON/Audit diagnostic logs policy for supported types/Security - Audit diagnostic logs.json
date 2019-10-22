@@ -1,0 +1,100 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "in": "[parameters('listOfResourceTypes')]"
+      },
+      "then": {
+        "effect": "[parameters('effect')]",
+        "details": {
+          "type": "Microsoft.Insights/diagnosticSettings",
+          "existenceCondition": {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                    "equals": "true"
+                  },
+                  {
+                    "anyOf": [
+                      {
+                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+                        "equals": "0"
+                      },
+                      {
+                        "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+                        "equals": "[parameters('requiredRetentionDays')]"
+                      }
+                    ]
+                  },
+                  {
+                    "field": "Microsoft.Insights/diagnosticSettings/logs.enabled",
+                    "equals": "true"
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "not": {
+                      "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+                      "equals": "true"
+                    }
+                  },
+                  {
+                    "field": "Microsoft.Insights/diagnosticSettings/logs.enabled",
+                    "equals": "true"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "defaultValue": "AuditIfNotExists"
+      },
+      "requiredRetentionDays": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Required retention (days)",
+          "description": "The required diagnostic logs retention in days"
+        },
+        "defaultValue": "365"
+      },
+      "listOfResourceTypes": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "List of resource types",
+          "description": "List of resource types"
+        },
+        "defaultValue": [
+          "Microsoft.ApiManagement/service",
+          "Microsoft.Batch/batchAccounts",
+          "Microsoft.DataLakeStore/accounts",
+          "Microsoft.DataLakeAnalytics/accounts",
+          "Microsoft.Eventhub/namespaces",
+          "Microsoft.DBforMySQL/servers",
+          "Microsoft.KeyVault/vaults",
+          "Microsoft.Network/loadBalancers",
+          "Microsoft.Logic/workflows",
+          "Microsoft.Search/searchServices",
+          "Microsoft.StreamAnalytics/streamingjobs",
+          "Microsoft.ContainerService/ManagedClusters"
+        ]
+      }
+    }
+  }
