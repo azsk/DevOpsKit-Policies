@@ -1,0 +1,19 @@
+{
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.DBforPostgreSQL/servers"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules",
+          "existenceCondition": {
+            "field": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules/virtualNetworkSubnetId",
+            "exists": "true"
+          }
+        }
+      }
+    },
+    "parameters": {}
+  }

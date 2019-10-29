@@ -1,0 +1,20 @@
+{
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.DBforPostgreSQL/servers"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.DBforPostgreSQL/servers/securityAlertPolicies",
+          "name": "Default",
+          "existenceCondition": {
+            "field": "Microsoft.DBforPostgreSQL/servers/securityAlertPolicies/state",
+            "equals": "Enabled"
+          }
+        }
+      }
+    },
+    "parameters": {}
+  }

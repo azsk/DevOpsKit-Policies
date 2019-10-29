@@ -1,0 +1,22 @@
+{
+    "mode": "Indexed",
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.DBforPostgreSQL/servers"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.DBforPostgreSQL/servers/configurations",
+          "name": "connection_throttling",
+          "existenceCondition": {
+            "field": "Microsoft.DBforPostgreSQL/servers/configurations/value",
+            "equals": "ON"
+          }
+        }
+      }
+    },
+    "parameters": {
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.DBforPostgreSQL/servers/firewallRules"
+          },
+          {
+            "field": "Microsoft.DBforPostgreSQL/servers/firewallRules/startIpAddress",
+            "equals": "0.0.0.0"
+          },
+          {
+            "field": "Microsoft.DBforPostgreSQL/servers/firewallRules/endIpAddress",
+            "equals": "0.0.0.0"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }

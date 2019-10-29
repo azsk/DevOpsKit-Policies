@@ -1,0 +1,20 @@
+{
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.DBforPostgreSQL/servers"  
+          },
+          {
+            "field": "Microsoft.DBforPostgreSQL/servers/sslEnforcement",
+            "notEquals": "Enabled"  
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }
