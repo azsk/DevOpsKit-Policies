@@ -1,0 +1,20 @@
+{
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.DBforMySQL/servers"  
+          },
+          {
+            "field": "Microsoft.DBforMySQL/servers/sslEnforcement",
+            "notEquals": "Enabled"  
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }
