@@ -1,57 +1,20 @@
 "policyRule": {
     "if": {
-        "anyOf": [
+        "allOf": [
             {
-                "allOf": [
-                    {
-                        "field": "type",
-                        "equals": "Microsoft.Web/sites"
-                    },
-                    {
-                        "field": "Microsoft.Web/sites/siteConfig.minTlsVersion",
-                        "less": "1.2"
-                    }
-                ]
-            },
-            {
-                "allOf": [
-                    {
-                        "field": "type",
-                        "equals": "Microsoft.Web/sites/config"
-                    },
-                    {
-                        "field": "Microsoft.Web/sites/config/minTlsVersion",
-                        "less": "1.2"
-                    }
-                ]
-            },
-            {
-                "allOf": [
-                    {
-                        "field": "type",
-                        "equals": "Microsoft.Web/sites/slots"
-                    },
-                    {
-                        "field": "Microsoft.Web/sites/slots/siteConfig.minTlsVersion",
-                        "less": "1.2"
-                    }
-                ]
-            },
-            {
-                "allOf": [
-                    {
-                        "field": "type",
-                        "equals": "Microsoft.Web/sites/slots/config"
-                    },
-                    {
-                        "field": "Microsoft.Web/sites/slots/config/minTlsVersion",
-                        "less": "1.2"
-                    }
-                ]
+                "field": "type",
+                "equals": "Microsoft.Web/sites"
             }
         ]
     },
     "then": {
-        "effect": "audit"
+        "effect": "auditIfNotExists",
+        "details": {
+            "type": "Microsoft.Web/sites/config",
+            "existenceCondition": {
+                "field": "Microsoft.Web/sites/config/minTlsVersion",
+                "equals": "1.2"
+            }
+        }
     }
 }
