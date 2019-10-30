@@ -1,0 +1,20 @@
+"policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.Web/sites/slots"
+        }
+      ]
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Web/sites/slots/config",
+        "existenceCondition": {
+          "field": "Microsoft.Web/sites/slots/config/minTlsVersion",
+          "equals": "1.2"
+        }
+      }
+    }
+  }
