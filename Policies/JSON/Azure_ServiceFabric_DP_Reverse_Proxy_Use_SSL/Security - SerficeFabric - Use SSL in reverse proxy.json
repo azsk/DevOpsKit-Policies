@@ -1,0 +1,25 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ServiceFabric/clusters"
+        },
+        {
+          "field": "Microsoft.ServiceFabric/clusters/nodeTypes[*].reverseProxyEndpointPort",
+          "exists": "true"
+        },
+        {
+          "field": "Microsoft.ServiceFabric/clusters/reverseProxyCertificate.thumbprint",
+          "exists": "false"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}
