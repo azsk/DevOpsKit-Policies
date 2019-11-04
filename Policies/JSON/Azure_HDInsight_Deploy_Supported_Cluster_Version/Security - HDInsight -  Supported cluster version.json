@@ -9,7 +9,7 @@
         },
         {
           "field": "Microsoft.HDInsight/clusters/clusterVersion",
-          "like": "[parameters('MinAllowedVersion')]"
+          "notLike": "[parameters('MinAllowedVersion')]"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "type": "String",
       "metadata": {
         "displayName": "MinAllowedVersion",
-        "description": null
+        "description": "Specify minimum allowed cluster version"
       },
       "defaultValue": "3.6.*"
     }
