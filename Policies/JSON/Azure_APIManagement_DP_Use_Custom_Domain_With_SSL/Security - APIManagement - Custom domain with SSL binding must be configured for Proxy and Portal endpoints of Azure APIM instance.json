@@ -1,0 +1,29 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "type",
+          "equals": "Microsoft.ApiManagement/service"
+        },
+        {
+          "anyOf": [
+            {
+              "field": "Microsoft.ApiManagement/service/portalUrl",
+              "like": "*.portal.azure-api.net"
+            },
+            {
+              "field": "Microsoft.ApiManagement/service/gatewayUrl",
+              "like": "*.azure-api.net"
+            }
+          ]
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {}
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.DataFactory/factories"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.DataFactory/factories/pipelines",
+        "existenceCondition": {
+          "field": "Microsoft.DataFactory/factories/pipelines/activities[*].policy.secureOutput",
+          "equals": "true"
+        }
+      }
+    }
+  },
+  "parameters": {}
+}
