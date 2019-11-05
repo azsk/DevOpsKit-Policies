@@ -1,0 +1,28 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "field": "type",
+      "equals": "Microsoft.Storage/storageAccounts"
+    },
+    "then": {
+      "effect": "auditIfNotExists",
+      "details": {
+        "type": "Microsoft.Storage/storageAccounts/blobServices",
+        "existenceCondition": {
+          "allOf": [
+            {
+              "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy.enabled",
+              "equals": "true"
+            },
+            {
+              "field": "Microsoft.Storage/storageAccounts/blobServices/default.deleteRetentionPolicy.enabled",
+              "equals": "true"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "parameters": {}
+}
