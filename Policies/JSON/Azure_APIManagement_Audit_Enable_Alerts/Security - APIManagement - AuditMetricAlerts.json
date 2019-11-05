@@ -1,0 +1,43 @@
+{
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.ApiManagement/service"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.Insights/alertRules",
+          "existenceScope": "Subscription",
+          "existenceCondition": {
+            "allOf": [
+              {
+                "field": "Microsoft.Insights/alertRules/isEnabled",
+                "equals": "true"
+              },
+              {
+                "field": "Microsoft.Insights/alertRules/condition.dataSource.metricName",
+                "in": "[parameters('metricNames')]"
+              },
+              {
+                "field": "Microsoft.Insights/alertRules/condition.dataSource.resourceUri",
+                "equals": "[concat('/subscriptions/', subscription().subscriptionId, '/resourcegroups/', resourceGroup().name, '/providers/Microsoft.ApiManagement/service/', field('name'))]"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "parameters": {
+      "metricNames": {
+        "type": "Array",
+        "defaultValue": [
+          "UnauthorizedRequests"
+        ],
+        "metadata": {
+          "displayName": "Metric names",
+          "description": "Comma seperated metric names that an alert rule must be enabled on."
+        }
+      }
+    }
+  }
