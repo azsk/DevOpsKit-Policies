@@ -1,0 +1,42 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ApiManagement/service/apis"
+          },
+          {
+            "anyOf": [
+              {
+                "value": "[greater(length(field('Microsoft.ApiManagement/service/apis/protocols')), 1)]",
+                "equals": "true"
+              },
+              {
+                "value": "[contains(field('Microsoft.ApiManagement/service/apis/protocols'), 'https')]",
+                "equals": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effectType')]"
+      }
+    },
+    "parameters": {
+      "effectType": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      }
+    }
+  }
