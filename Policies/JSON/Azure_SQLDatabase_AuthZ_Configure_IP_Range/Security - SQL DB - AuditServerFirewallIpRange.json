@@ -12,7 +12,7 @@
         },
         {
           "field": "Microsoft.Sql/servers/firewallRules/endIpAddress",
-          "equals": "0.0.0.0"
+          "equals": "255.255.255.255"
         }
       ]
     },
