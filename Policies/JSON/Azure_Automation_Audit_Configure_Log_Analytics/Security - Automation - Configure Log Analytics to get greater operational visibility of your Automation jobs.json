@@ -1,0 +1,18 @@
+{
+    "policyRule": {
+        "if": {
+            "field": "type",
+            "equals": "Microsoft.Automation/automationAccounts"
+        },
+        "then": {
+            "effect": "auditIfNotExists",
+            "details": {
+                "type": "Microsoft.Insights/diagnosticSettings",
+                "existenceCondition": {
+                    "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+                    "exists": "true"
+                }
+            }
+        }
+    }
+}
