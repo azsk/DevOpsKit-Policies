@@ -1,0 +1,24 @@
+{
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Sql/servers/firewallRules"
+          },
+          {
+            "field": "Microsoft.Sql/servers/firewallRules/startIpAddress",
+            "equals": "0.0.0.0"
+          },
+          {
+            "field": "Microsoft.Sql/servers/firewallRules/endIpAddress",
+            "equals": "0.0.0.0"
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    },
+    "parameters": {}
+  }

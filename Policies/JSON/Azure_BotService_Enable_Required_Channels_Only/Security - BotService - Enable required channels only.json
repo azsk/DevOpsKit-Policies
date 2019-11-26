@@ -8,8 +8,8 @@
           "equals": "Microsoft.BotService/botServices"
         },
         {
-          "field": "Microsoft.BotService/botServices/enabledChannels",
-          "like": "*"
+          "value": "[greater(length(field('Microsoft.BotService/botServices/enabledChannels')), 0)]",
+          "equals": "true"
         }
       ]
     },
