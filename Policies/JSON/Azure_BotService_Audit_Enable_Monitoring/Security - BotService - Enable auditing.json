@@ -17,7 +17,7 @@
           "allOf": [
             {
               "field": "Microsoft.BotService/botServices/developerAppInsightsApplicationId",
-              "like": "*"
+              "match": "########-####-####-####-############"
             }
           ]
         }
