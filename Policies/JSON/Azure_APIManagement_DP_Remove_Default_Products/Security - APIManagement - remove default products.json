@@ -2,28 +2,27 @@
     "mode": "All",
     "policyRule": {
       "if": {
-        "field": "type",
-        "equals": "Microsoft.ApiManagement/service"
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ApiManagement/service/products"
+          },
+          {
+            "anyOf": [
+              {
+                "field": "Microsoft.ApiManagement/service/products/displayName",
+                "equals": "starter"
+              },
+              {
+                "field": "Microsoft.ApiManagement/service/products/displayName",
+                "equals": "unlimited"
+              }
+            ]
+          }
+        ]
       },
       "then": {
-        "effect": "auditIfNotExists",
-        "details": {
-          "type": "Microsoft.ApiManagement/service/products",
-          "existenceCondition": {
-            "not": {
-              "anyOf": [
-                {
-                  "field": "Microsoft.ApiManagement/service/products/displayName",
-                  "equals": "starter"
-                },
-                {
-                  "field": "Microsoft.ApiManagement/service/products/displayName",
-                  "equals": "unlimited"
-                }
-              ]
-            }
-          }
-        }
+        "effect": "audit"
       }
     },
     "parameters": {}
