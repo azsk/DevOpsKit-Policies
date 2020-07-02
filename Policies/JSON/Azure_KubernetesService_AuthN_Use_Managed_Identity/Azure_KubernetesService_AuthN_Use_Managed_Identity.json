@@ -1,0 +1,56 @@
+{
+    "properties": {
+      "displayName": "Managed Identity should be used in Kubernetes Services",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Managed Service Identity (MSI) allows your app to easily access other AAD-protected resources such as AKS and it's infrastructure resources. The identity is managed by the Azure platform and eliminates the need to provision/manage/rotate any secrets thus reducing the overall risk.\nRefer: https://docs.microsoft.com/en-us/azure/aks/use-managed-identity",
+      "metadata": {
+        "createdBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "createdOn": "2020-06-19T19:58:14.047232Z",
+        "updatedBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "updatedOn": "2020-06-24T17:05:27.3734527Z"
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Disabled"
+          ],
+          "defaultValue": "Audit"
+        }
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.ContainerService/managedClusters"
+            },
+            {
+              "anyOf": [
+                {
+                  "field": "Microsoft.ContainerService/managedClusters/servicePrincipalProfile.clientId",
+                  "exists": "false"
+                },
+                {
+                  "field": "Microsoft.ContainerService/managedClusters/servicePrincipalProfile.clientId",
+                  "notEquals": "msi"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/subscriptions/abb5301a-22a4-41f9-9e5f-99badff261f8/providers/Microsoft.Authorization/policyDefinitions/dc5aa8d5-8f54-4fa8-8a26-26c40fcc3ff9",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "dc5aa8d5-8f54-4fa8-8a26-26c40fcc3ff9"
+  }

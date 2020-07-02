@@ -1,0 +1,48 @@
+{
+    "properties": {
+      "displayName": "Private Kubernetes cluster should be used",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "This policy ensures that network traffic between your API server and your node pools remains on the private network only.\nRefer: https://docs.microsoft.com/en-us/azure/aks/private-clusters",
+      "metadata": {
+        "createdBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "createdOn": "2020-06-22T07:24:28.2809265Z",
+        "updatedBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "updatedOn": "2020-06-24T17:04:57.9032168Z"
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Disabled"
+          ],
+          "defaultValue": "Audit"
+        }
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.ContainerService/managedClusters"
+            },
+            {
+              "field": "Microsoft.ContainerService/managedClusters/apiServerAccessProfile.enablePrivateCluster",
+              "equals": "false"
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/subscriptions/abb5301a-22a4-41f9-9e5f-99badff261f8/providers/Microsoft.Authorization/policyDefinitions/a1d90794-4d96-4144-aef6-8d89dd99212b",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "a1d90794-4d96-4144-aef6-8d89dd99212b"
+  }
