@@ -1,0 +1,48 @@
+{
+    "properties": {
+      "displayName": "AAD should be enabled in Kubernetes Service",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Using the native enterprise directory for authentication ensures that there is a built-in high level of assurance in the user identity established for subsequent access control. All Enterprise subscriptions are automatically associated with their enterprise directory (xxx.onmicrosoft.com) and users in the native directory are trusted for authentication to enterprise subscriptions.\nRefer: https://docs.microsoft.com/en-us/azure/aks/aad-integration to configure AAD in Kubernetes Service.",
+      "metadata": {
+        "createdBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "createdOn": "2020-06-24T09:02:10.3256679Z",
+        "updatedBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "updatedOn": "2020-06-24T17:03:06.0918754Z"
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Disabled"
+          ],
+          "defaultValue": "Audit"
+        }
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.ContainerService/managedClusters"
+            },
+            {
+              "field": "Microsoft.ContainerService/managedClusters/aadProfile",
+              "exists": "false"
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/subscriptions/abb5301a-22a4-41f9-9e5f-99badff261f8/providers/Microsoft.Authorization/policyDefinitions/30dd27c5-bdf1-442b-84dc-13f7becb9d64",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "30dd27c5-bdf1-442b-84dc-13f7becb9d64"
+  }

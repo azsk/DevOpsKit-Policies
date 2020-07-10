@@ -1,0 +1,48 @@
+{
+    "properties": {
+      "displayName": "Restrict public IP on Nodes",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Public IPs provide direct access over the internet exposing the nodes to attacks over the public network. Hence each public IP on a node must be reviewed carefully.",
+      "metadata": {
+        "createdBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "createdOn": "2020-06-22T06:59:43.7394731Z",
+        "updatedBy": "3bafe3b1-1fcf-4d98-83ae-0ec1f2c2c274",
+        "updatedOn": "2020-06-24T17:05:58.0992756Z"
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Disabled"
+          ],
+          "defaultValue": "Audit"
+        }
+      },
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "type",
+              "equals": "Microsoft.ContainerService/managedClusters"
+            },
+            {
+              "field": "Microsoft.ContainerService/managedClusters/agentPoolProfiles[*].enableNodePublicIP",
+              "equals": "true"
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/subscriptions/abb5301a-22a4-41f9-9e5f-99badff261f8/providers/Microsoft.Authorization/policyDefinitions/7ae4b197-4518-43aa-ac3c-1e51d73edff9",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "7ae4b197-4518-43aa-ac3c-1e51d73edff9"
+  }

@@ -1,21 +1,47 @@
 {
-    "mode": "All",
-    "policyRule": {
-      "if": {
-        "allOf": [
-          {
-            "field": "type",
-            "equals": "Microsoft.ContainerService/managedClusters"
-          },
-          {
-            "value": "[contains(field('Microsoft.ContainerService/managedClusters/addonProfiles'),'omsagent')]",
-            "equals": "false"
+  "properties": {
+      "displayName": "Monitoring agent should be enabled and configured",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Monitoring agent should be enabled and configured to monitor the performance of workloads deployed on Kubernetes cluster.",
+      "parameters": {
+          "effect": {
+              "type": "string",
+              "defaultValue": "Audit",
+              "allowedValues": [
+                  "Audit",
+                  "Disabled"
+              ],
+              "metadata": {
+                  "displayName": "Effect",
+                  "description": "Enable or disable the execution of the policy"
+              }
           }
-        ]
       },
-      "then": {
-        "effect": "audit"
+      "policyRule": {
+          "if": {
+              "allOf": [
+                  {
+                      "field": "type",
+                      "equals": "Microsoft.ContainerService/managedClusters"
+                  },
+                  {
+                      "anyOf": [
+                          {
+                              "field": "Microsoft.ContainerService/managedClusters/addonProfiles.omsagent.enabled",
+                              "exists": "false"
+                          },
+                          {
+                              "field": "Microsoft.ContainerService/managedClusters/addonProfiles.omsagent.enabled",
+                              "equals": "false"
+                          }
+                      ]
+                  }
+              ]
+          },
+          "then": {
+              "effect": "[parameters('effect')]"
+          }
       }
-    },
-    "parameters": {}
   }
+}

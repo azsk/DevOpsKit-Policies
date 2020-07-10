@@ -1,0 +1,47 @@
+{
+    "properties": {
+        "displayName": "HTTP application routing should be disabled for production clusters",
+        "policyType": "Custom",
+        "mode": "All",
+        "description": "HTTP application routing is only recommended for dev/test clusters and should be disabled for production clusters.",
+        "parameters": {
+            "effect": {
+                "type": "string",
+                "defaultValue": "Audit",
+                "allowedValues": [
+                    "Audit",
+                    "Disabled"
+                ],
+                "metadata": {
+                    "displayName": "Effect",
+                    "description": "Enable or disable the execution of the policy"
+                }
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.ContainerService/managedClusters"
+                    },
+                    {
+                        "anyOf": [
+                            {
+                                "field": "Microsoft.ContainerService/managedClusters/addonProfiles.httpApplicationRouting.enabled",
+                                "exists": "false"
+                            },
+                            {
+                                "field": "Microsoft.ContainerService/managedClusters/addonProfiles.httpApplicationRouting.enabled",
+                                "equals": "true"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "then": {
+                "effect": "[parameters('effect')]"
+            }
+        }
+    }
+}
