@@ -1,0 +1,32 @@
+{
+   "parameters": {},
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Web/sites/config"
+          },
+          {
+            "anyOf": [
+              {
+                "field": "Microsoft.Web/sites/config/siteAuthEnabled",
+                "equals": false
+              },
+              {
+                "field": "Microsoft.Web/sites/config/siteAuthSettings.clientId",
+                "equals": ""
+              },
+              {
+                "field": "Microsoft.Web/sites/config/siteAuthSettings.microsoftAccountClientId",
+                "notequals": ""
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+}
