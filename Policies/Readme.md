@@ -83,7 +83,7 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >  
 > 1. <b> Partial* </b>  represents Azure Policy that partially apply in relation to AzSK. Please see the reason below:
 >
->       | Control Id | Evaluation creteria which are not included in Azure policy |
+>       | Control Id | Evaluation criteria  which are not included in Azure policy |
 >       |------------|-----------------------------------------------------------|
 >       |Azure_Batch_Audit_Enable_Metric_Alert| While AzSK makes sanity check on conditions of the alert, Azure Policy only checks for the presence of the alert.|
 >       |Azure_EventHub_AuthZ_Use_Min_Permissions_Access_Policies| While Azure Policy checks for the presence of authorization rule, AzSK also enforces that authorization rule with full permission must not be present.|
@@ -97,7 +97,7 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >
 >   2. <b> Full** </b> represents Policy where Azure policy evaluation is different or beyond the implementation of AzSK controls. Please see the reason below:
 >       
->       | Control Id | Difference in evaluation creteria in AzSK and Azure policy  |
+>       | Control Id | Difference in evaluation criteria in AzSK and Azure policy  |
 >       |------------|-----------------------------------------------------|
 >       |Azure_KubernetesService_Deploy_Use_Latest_Version| While AzSK enforces that the Azure Kubernets Service (AKS) version should be the maximum minor version which are '1.14.8, 1.15.10, 1.16.7', Azure Policy enforces AKS version should be 1.11.9+, 1.12.7+, 1.13.5+, and 1.14.0+ |
 >       |Azure_Subscription_AuthZ_Limit_Admin_Owner_Count| This control is evaluated via ASC. The exact evaluation details are internal to ASC.|
