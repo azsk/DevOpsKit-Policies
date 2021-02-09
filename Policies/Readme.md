@@ -55,7 +55,7 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 |Azure_VirtualMachine_Config_Enable_NSG|	NSG must be configured for Virtual Machine|	Internet-facing virtual machines should be protected with network security groups|	Full**|
 |Azure_VNet_NetSec_Configure_NSG|	NSG should be used for subnets in a virtual network to permit traffic only on required inbound/outbound ports. NSGs should not have a rule to allow any-to-any traffic|	Subnets should be associated with a Network Security Group|	Full|
 |Azure_APIManagement_NetSec_Configure_Virtual_Network_For_APIM|	Consider hosting APIM within a virtual network for improved isolation|	API Management services should use a virtual network|	Full|
-|Azure_AppService_AuthN_Use_AAD_for_Client_AuthN/Azure_AppService_AuthN_Redirect_To_Login_Page|	App Service must authenticate users using Azure Active Directory backed credentials/App Service must be set to redirect unauthenticated requests to login page|	Authentication should be enabled on your API app|	Full|
+|Azure_AppService_AuthN_Use_AAD_for_Client_AuthN;<br/>Azure_AppService_AuthN_Redirect_To_Login_Page|	App Service must authenticate users using Azure Active Directory backed credentials/App Service must be set to redirect unauthenticated requests to login page|	Authentication should be enabled on your API app|	Full|
 |Azure_AppService_DP_Use_Secure_TLS_Version|	Use approved version of TLS for the App Service|	Latest TLS version should be used in your API App; <br/>Latest TLS version should be used in your Function App; <br/>Latest TLS version should be used in your Web App|	Full|
 |Azure_RedisCache_NetSec_Configure_Virtual_Network_For_Domain_App|	Redis Cache instance should be confined within a virtual network for domain-joined scenarios|	Azure Cache for Redis should reside within a virtual network|	Full**|
 |Azure_VirtualMachineScaleSet_Audit_Enable_Diagnostics|	Diagnostics (IaaSDiagnostics extension on Windows; LinuxDiagnostic extension on Linux) must be enabled on Virtual Machine Scale Set|	Diagnostic logs in Virtual Machine Scale Sets should be enabled|	Full|
@@ -96,3 +96,6 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >       | Control Id | Difference in evaluation creteria in AzSK and Azure policy  |
 >       |------------|-----------------------------------------------------|
 >       |Azure_KubernetesService_Deploy_Use_Latest_Version||
+
+
+
