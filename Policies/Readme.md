@@ -85,7 +85,7 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >
 >       | Control Id | Evaluation creteria which are not included in Azure policy |
 >       |------------|-----------------------------------------------------------|
->       | Azure_Batch_Audit_Enable_Metric_Alert| While AzSK makes sanity check on conditions of the alert, Azure Policy only checks for the presence of the alert.|
+>       |Azure_Batch_Audit_Enable_Metric_Alert| While AzSK makes sanity check on conditions of the alert, Azure Policy only checks for the presence of the alert.|
 >       |Azure_EventHub_AuthZ_Use_Min_Permissions_Access_Policies| |
 >   
 >     <br/>
@@ -96,6 +96,10 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >       | Control Id | Difference in evaluation creteria in AzSK and Azure policy  |
 >       |------------|-----------------------------------------------------|
 >       |Azure_KubernetesService_Deploy_Use_Latest_Version||
+>       |Azure_RedisCache_NetSec_Configure_Virtual_Network_For_Domain_App||
+>       |Azure_HDInsight_DP_Storage_Encrypt_At_Rest||
+>       |Azure_HDInsight_DP_Storage_Encrypt_In_Transit||
+>       |Azure_KubernetesService_SI_Dont_Use_Default_Namespace||
 
 
 
