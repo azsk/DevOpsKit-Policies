@@ -86,11 +86,11 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >       | Control Id | Evaluation creteria which are not included in Azure policy |
 >       |------------|-----------------------------------------------------------|
 >       |Azure_Batch_Audit_Enable_Metric_Alert| While AzSK makes sanity check on conditions of the alert, Azure Policy only checks for the presence of the alert.|
->       |Azure_EventHub_AuthZ_Use_Min_Permissions_Access_Policies| While in AzSK full permission policy and no permission policy both are considered as non-compliant, Azure Policy only checks for the presence of authorization rule. //TODO check for "permission policy"/"authorization rule"|
+>       |Azure_EventHub_AuthZ_Use_Min_Permissions_Access_Policies| While Azure Policy checks for the presence of authorization rule, AzSK also enforces that authorization rule with full permission must not be present.|
 >       |Azure_KubernetesService_NetSec_Dont_Open_Management_Ports| While Azure Policy enforces services to listen only on allowed ports in a Kubernetes cluster, AzSK also enforces that Network Security Group (NSG) should be configured.|
 >       |Azure_SQLDatabase_Audit_Enable_Threat_Detection_Server| While Azure Policy enforces that Azure Threat Protection (ATP) is enabled, AzSK also makes sanity check on the ATP configurations such as email notification is configured and all ATP types are selected.|
 >       |Azure_Subscription_SI_Classic_Resources| While Azure Policy only checks for classic Storage Account and Virtual Machine, AzSK checks for all type of classic resources.|
->       |Azure_VirtualMachine_SI_Enable_Antimalware| While Azure Policy enforces that Anti-Malware extension is present and Realtime protection is enabled, AzSK also enforces that Auto upgrade to minor version is enabled. //TODO Anti-Malware extension && Auto upgrade to minor version is enabled|
+>       |Azure_VirtualMachine_SI_Enable_Antimalware| While Azure Policy enforces that Anti-Malware extension is present and Realtime protection is enabled, AzSK also enforces that Auto upgrade to minor version is enabled.|
 >   
 >     <br/>
 >     <br/>
