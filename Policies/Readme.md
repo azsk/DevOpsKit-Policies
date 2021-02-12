@@ -78,8 +78,9 @@ This page lists the built-in Azure Policies equivalent to the DevOps Kit (AzSK) 
 <br/>
 
 
-> #### <b> NOTE:</b><br/> The following tables explain the differences between AzSK control and corresponding Azure Policy where the coverage is marked as "Partial*" or "Full**" 
->   <br/>
+> #### <b> NOTE:</b> <br/> 
+>
+> The following tables explain the differences between AzSK control and corresponding Azure Policy where the coverage is marked as "Partial*" or "Full**" 
 >  
 > 1. <b> Partial* </b>  represents Azure Policy that covers the AzSK control evaluation logic partially. Please see reasons below:
 >
