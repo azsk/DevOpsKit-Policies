@@ -95,7 +95,7 @@ This page lists the built-in Azure Policies equivalent to the DevOps Kit (AzSK) 
 >     <br/>
 >     <br/>
 >
->   2. <b> Full** </b> represents Azure Policy where policy evaluation is altogether different than that of corresponding AzSK control evaluation logic or beyond the implementation of AzSK control scope. Please see reasons below:
+>   2. <b> Full** </b> represents Azure Policy where policy evaluation is altogether different than that of corresponding AzSK control. Please see reasons below:
 >       
 >       | Control Id | Difference in evaluation criteria in AzSK and Azure policy  |
 >       |------------|-----------------------------------------------------|
