@@ -1,6 +1,6 @@
 # DevOps Kit (AzSK) Control Mapping To BuiltIn Azure Policy
 
-This page lists the built-in Azure Policies which are equivalent to the DevOps Kit (AzSK) controls. In some cases, the implementation of the policy differs from the control evaluation logic in AzSK. Such cases are marked as Partial* and Full** in the table below.
+This page lists the built-in Azure Policies equivalent to the DevOps Kit (AzSK) controls. In some cases, the implementation of the policy differs from the control evaluation logic in AzSK. Such cases are marked as Partial* and Full** in the table below.
 
 | Control Id | Control Description | Azure Policy | Azure Policy Coverage |
 |------------|---------------------|--------------|-----------------------|
