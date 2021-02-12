@@ -1,6 +1,6 @@
 # DevOps Kit (AzSK) Control Mapping To BuiltIn Azure Policy
 
-This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Policy. In some cases, the implementation of the Policy differs from the control evaluation logic in AzSK. Those are marked as Partial* and Full** in the table below.
+This page lists the built-in Azure Policies which are equivalent to the DevOps Kit (AzSK) controls. In some cases, the implementation of the policy differs from the control evaluation logic in AzSK. Such cases are marked as Partial* and Full** in the table below.
 
 | Control Id | Control Description | Azure Policy | Azure Policy Coverage |
 |------------|---------------------|--------------|-----------------------|
@@ -78,10 +78,10 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 <br/>
 
 
-> #### <b> NOTE: </b>
+> #### <b> NOTE: The following tables explain the differences between AzSK control and corresponding Azure Policy where the coverage is marked as "Partial*" or "Full**" </b>
 >   <br/>
 >  
-> 1. <b> Partial* </b>  represents Azure Policy that partially apply in relation to AzSK. Please see the reason below:
+> 1. <b> Partial* </b>  represents Azure Policy that covers the AzSK control evaluation logic partially. Please see reasons below:
 >
 >       | Control Id | Evaluation criteria  which are not included in Azure policy |
 >       |------------|-----------------------------------------------------------|
@@ -95,7 +95,7 @@ This page lists the DevOps kit (AzSK) control mapping to the BuiltIn Azure Polic
 >     <br/>
 >     <br/>
 >
->   2. <b> Full** </b> represents Policy where Azure policy evaluation is different or beyond the implementation of AzSK controls. Please see the reason below:
+>   2. <b> Full** </b> represents Azure Policy where policy evaluation is altogether different than that of corresponding AzSK control evaluation logic or beyond the implementation of AzSK control scope. Please see reasons below:
 >       
 >       | Control Id | Difference in evaluation criteria in AzSK and Azure policy  |
 >       |------------|-----------------------------------------------------|
