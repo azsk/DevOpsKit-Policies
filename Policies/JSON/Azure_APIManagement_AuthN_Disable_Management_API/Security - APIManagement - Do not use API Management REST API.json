@@ -1,0 +1,21 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "field": "type",
+        "equals": "Microsoft.ApiManagement/service"
+      },
+      "then": {
+        "effect": "auditIfNotExists",
+        "details": {
+          "type": "Microsoft.ApiManagement/service/tenant",
+          "name": "access",
+          "existenceCondition": {
+            "field": "Microsoft.ApiManagement/service/tenant/enabled",
+            "equals": false
+          }
+        }
+      }
+    },
+    "parameters": {}
+  }
